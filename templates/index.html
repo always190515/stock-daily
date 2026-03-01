@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>股票热点日报 - {{ date_cn }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📈 股票热点日报</h1>
+            <p class="date">{{ date_cn }}</p>
+            <p class="date-en">{{ date }}</p>
+        </header>
+
+        <!-- 大盘概况 -->
+        <section class="section">
+            <h2>📊 大盘概况</h2>
+            <div class="market-cards">
+                <div class="card {{ 'up' if market.sh_change > 0 else 'down' }}">
+                    <div class="card-title">上证指数</div>
+                    <div class="card-value">{{ "%.2f"|format(market.sh_close) }}</div>
+                    <div class="card-change">{{ "%+.2f"|format(market.sh_change) }}%</div>
+                </div>
+                <div class="card {{ 'up' if market.sz_change > 0 else 'down' }}">
+                    <div class="card-title">深证成指</div>
+                    <div class="card-value">{{ "%.2f"|format(market.sz_close) }}</div>
+                    <div class="card-change">{{ "%+.2f"|format(market.sz_change) }}%</div>
+                </div>
+                <div class="card {{ 'up' if market.cy_change > 0 else 'down' }}">
+                    <div class="card-title">创业板指</div>
+                    <div class="card-value">{{ "%.2f"|format(market.cy_close) }}</div>
+                    <div class="card-change">{{ "%+.2f"|format(market.cy_change) }}%</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 热点板块 -->
+        <section class="section">
+            <h2>🔥 今日热点板块 TOP{{ sectors|length }}</h2>
+            <div class="sector-list">
+                {% for sector in sectors %}
+                <div class="sector-item {{ 'up' if sector.change > 0 else 'down' }}">
+                    <div class="sector-rank">#{{ loop.index }}</div>
+                    <div class="sector-info">
+                        <div class="sector-name">{{ sector.name }}</div>
+                        <div class="sector-leader">领涨：{{ sector.leader }}</div>
+                    </div>
+                    <div class="sector-change">{{ "%+.2f"|format(sector.change) }}%</div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- 重要新闻 -->
+        <section class="section">
+            <h2>📰 重要新闻 TOP{{ news|length }}</h2>
+            <div class="news-list">
+                {% for item in news %}
+                <div class="news-item">
+                    <div class="news-rank">{{ loop.index }}</div>
+                    <div class="news-content">
+                        <div class="news-title">{{ item.title }}</div>
+                        <div class="news-meta">
+                            <span class="news-source">{{ item.source }}</span>
+                            <span class="news-time">{{ item.time }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- 历史归档 -->
+        <section class="section">
+            <h2>📁 历史归档</h2>
+            <div class="archive-list">
+                {% for archive in archives %}
+                <a href="/daily/{{ archive.date }}.html" class="archive-item">
+                    <span class="archive-date">{{ archive.date_cn }}</span>
+                    <span class="archive-link">查看 →</span>
+                </a>
+                {% endfor %}
+            </div>
+            <div class="archive-more">
+                <a href="/archive.html">查看全部历史 →</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>免责声明：本报告仅供参考，不构成投资建议。股市有风险，投资需谨慎。</p>
+            <p class="footer-time">生成时间：{{ generate_time }}</p>
+        </footer>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

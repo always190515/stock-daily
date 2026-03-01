@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+header .date {
+    font-size: 20px;
+    opacity: 0.95;
+}
+
+header .date-en {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+.section {
+    padding: 30px 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.market-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px 15px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card.up .card-change { color: #e74c3c; font-weight: bold; }
+.card.down .card-change { color: #27ae60; font-weight: bold; }
+
+.card-title {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.card-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.card-change { font-size: 14px; }
+
+.sector-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sector-item {
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    transition: all 0.2s;
+}
+
+.sector-item:hover {
+    background: #f0f0f0;
+    transform: translateX(5px);
+}
+
+.sector-item.up .sector-change { color: #e74c3c; font-weight: bold; }
+.sector-item.down .sector-change { color: #27ae60; font-weight: bold; }
+
+.sector-rank {
+    font-size: 18px;
+    font-weight: bold;
+    color: #667eea;
+    width: 40px;
+    flex-shrink: 0;
+}
+
+.sector-info { flex: 1; min-width: 0; }
+
+.sector-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.sector-leader {
+    font-size: 13px;
+    color: #666;
+}
+
+.sector-change {
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-left: 15px;
+}
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.news-item {
+    display: flex;
+    gap: 12px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.news-item:hover { background: #f0f0f0; }
+
+.news-rank {
+    font-size: 18px;
+    font-weight: bold;
+    color: #667eea;
+    width: 30px;
+    flex-shrink: 0;
+}
+
+.news-content { flex: 1; min-width: 0; }
+
+.news-title {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.news-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+    color: #999;
+}
+
+.news-source {
+    background: #667eea;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.archive-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.archive-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.2s;
+}
+
+.archive-item:hover {
+    background: #667eea;
+    color: white;
+    transform: translateX(5px);
+}
+
+.archive-date { font-size: 15px; }
+.archive-link { font-size: 14px; opacity: 0.8; }
+
+.archive-more {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.archive-more a {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.archive-more a:hover { text-decoration: underline; }
+
+footer {
+    background: #f8f9fa;
+    padding: 30px 20px;
+    text-align: center;
+    color: #999;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.footer-time {
+    font-size: 12px;
+    color: #bbb;
+}
+
+@media (max-width: 600px) {
+    header h1 { font-size: 24px; }
+    header .date { font-size: 18px; }
+    .market-cards { grid-template-columns: 1fr; gap: 10px; }
+    .card { padding: 15px 10px; }
+    .sector-item { padding: 12px; }
+    .sector-rank { font-size: 16px; width: 35px; }
+    .sector-name { font-size: 15px; }
+    .sector-leader { font-size: 12px; }
+    .sector-change { font-size: 14px; margin-left: 10px; }
+}
