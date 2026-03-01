@@ -3,279 +3,389 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>股票热点日报 - 2026年03月01日</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>股票热点早报</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+        }
+        .header h1 { font-size: 28px; margin-bottom: 8px; letter-spacing: 2px; }
+        .header .meta { font-size: 14px; opacity: 0.9; }
+        
+        /* Cards */
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .card h2 {
+            font-size: 18px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .card h2 .icon { font-size: 20px; }
+        
+        /* Summary */
+        .summary-card {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);
+            border-left: 4px solid #667eea;
+        }
+        .summary-title { font-size: 20px; font-weight: bold; margin-bottom: 8px; }
+        .summary-desc { color: #ccc; font-size: 14px; }
+        
+        /* Index */
+        .index-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+        }
+        .index-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .index-item .name { font-size: 12px; color: #aaa; margin-bottom: 4px; }
+        .index-item .price { font-size: 20px; font-weight: bold; }
+        .index-item .change { font-size: 14px; }
+        .red { color: #ff4757; }
+        .green { color: #2ed573; }
+        
+        /* Sectors */
+        .sector-list {}
+        .sector-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+        .sector-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .sector-name {
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sector-rank {
+            background: #667eea;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+        .sector-change { font-size: 24px; font-weight: bold; }
+        
+        .sector-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 8px;
+        }
+        .sector-driver {
+            background: rgba(46, 213, 115, 0.2);
+            color: #2ed573;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .sector-driver.warning {
+            background: rgba(255, 107, 107, 0.2);
+            color: #ff6b6b;
+        }
+        
+        /* Money Flow */
+        .money-flow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .flow-section h3 { font-size: 14px; color: #aaa; margin-bottom: 12px; }
+        .flow-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            font-size: 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        /* Sentiment */
+        .sentiment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 12px;
+        }
+        .sentiment-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .sentiment-item .value { font-size: 24px; font-weight: bold; }
+        .sentiment-item .label { font-size: 12px; color: #aaa; margin-top: 4px; }
+        
+        /* Outlook */
+        .outlook-tips {
+            font-size: 16px;
+            line-height: 1.6;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 12px;
+        }
+        
+        .data-note {
+            background: rgba(255, 193, 7, 0.1);
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 16px;
+            font-size: 13px;
+            color: #ffc107;
+        }
+        
+        @media (max-width: 600px) { .money-flow { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>📈 股票热点日报</h1>
-            <p class="date">2026年03月01日</p>
-            <p class="date-en">20260301</p>
-        </header>
-
-        <section class="section">
-            <h2>📊 大盘概况</h2>
-            <div class="market-cards">
-
-                <div class="card up">
-                    <div class="card-title">上证指数</div>
-                    <div class="card-value">3050.00</div>
-                    <div class="card-change">+0.50%</div>
+        <!-- Header -->
+        <div class="header">
+            <h1>📈 股票热点早报</h1>
+            <div class="meta">2026年03月01日 周日</div>
+            <div style="margin-top:8px;font-size:12px;opacity:0.8">数据来源: AKShare | 板块数据为前交易日资金流</div>
+        </div>
+        
+        <!-- 核心摘要 -->
+        <div class="card summary-card">
+            <h2><span class="icon">🎯</span> 核心摘要</h2>
+            <div class="summary-title">小金属 (+7.41%)</div>
+            <div class="summary-desc">驱动: 资金驱动：大单净流入79亿</div>
+            <div style="margin-top: 12px; display: flex; gap: 12px; flex-wrap: wrap;">
+                <span>💰 资金方向: 小金属</span>
+                <span>🔥 热点: 小金属, 贵金属, 电力</span>
+            </div>
+        </div>
+        
+        <!-- 大盘指数 -->
+        <div class="card">
+            <h2><span class="icon">📊</span> 大盘指数</h2>
+            <div class="index-grid">
+                <div class="index-item">
+                    <div class="name">上证指数</div>
+                    <div class="price">4162.88</div>
+                    <div class="change red">↑ +0.39%</div>
                 </div>
-
-                <div class="card up">
-                    <div class="card-title">深证成指</div>
-                    <div class="card-value">9200.00</div>
-                    <div class="card-change">+0.80%</div>
+                <div class="index-item">
+                    <div class="name">深证成指</div>
+                    <div class="price">14495.09</div>
+                    <div class="change green">↓ -0.06%</div>
                 </div>
-
-                <div class="card up">
-                    <div class="card-title">创业板指</div>
-                    <div class="card-value">1850.00</div>
-                    <div class="card-change">+1.20%</div>
+                <div class="index-item">
+                    <div class="name">创业板指</div>
+                    <div class="price">3310.30</div>
+                    <div class="change green">↓ -1.04%</div>
+                </div>
+                <div class="index-item">
+                    <div class="name">上证50</div>
+                    <div class="price">3039.43</div>
+                    <div class="change red">↑ +0.14%</div>
+                </div>
+                <div class="index-item">
+                    <div class="name">沪深300</div>
+                    <div class="price">4710.65</div>
+                    <div class="change green">↓ -0.34%</div>
                 </div>
             </div>
-        </section>
-
-        <section class="section">
-            <h2>🔥 今日热点板块 TOP8</h2>
+        </div>
+        
+        <!-- 活跃板块 -->
+        <div class="card">
+            <h2><span class="icon">🔥</span> 活跃板块 (前交易日资金流数据)</h2>
+            
+            <div class="data-note">
+                ⚠️ 注意：以下板块数据基于前一交易日(2026-02-27)的资金流数据，而非当日实时数据
+            </div>
+            
             <div class="sector-list">
-
-                <div class="sector-item up">
-                    <div class="sector-rank">#1</div>
-                    <div class="sector-info">
-                        <div class="sector-name">医药生物</div>
-                        <div class="sector-leader">领涨：恒瑞医药</div>
+                <div class="sector-item">
+                    <div class="sector-header">
+                        <div class="sector-name">
+                            <span class="sector-rank">TOP1</span>
+                            小金属
+                        </div>
+                        <div class="sector-change red">↑ +7.41%</div>
                     </div>
-                    <div class="sector-change">+3.76%</div>
+                    <div class="sector-meta">
+                        <span>📈 净额: +78.67亿</span>
+                    </div>
+                    <div class="sector-driver">🚀 资金驱动：大单净流入79亿</div>
                 </div>
-
-                <div class="sector-item up">
-                    <div class="sector-rank">#2</div>
-                    <div class="sector-info">
-                        <div class="sector-name">人工智能</div>
-                        <div class="sector-leader">领涨：科大讯飞</div>
+                
+                <div class="sector-item">
+                    <div class="sector-header">
+                        <div class="sector-name">
+                            <span class="sector-rank">TOP2</span>
+                            贵金属
+                        </div>
+                        <div class="sector-change red">↑ +3.32%</div>
                     </div>
-                    <div class="sector-change">+3.61%</div>
+                    <div class="sector-meta">
+                        <span>📈 净额: +22.06亿</span>
+                    </div>
+                    <div class="sector-driver">🚀 资金驱动：大单净流入22亿</div>
                 </div>
-
-                <div class="sector-item up">
-                    <div class="sector-rank">#3</div>
-                    <div class="sector-info">
-                        <div class="sector-name">券商</div>
-                        <div class="sector-leader">领涨：中信证券</div>
+                
+                <div class="sector-item">
+                    <div class="sector-header">
+                        <div class="sector-name">
+                            <span class="sector-rank">TOP3</span>
+                            电力
+                        </div>
+                        <div class="sector-change red">↑ +3.25%</div>
                     </div>
-                    <div class="sector-change">+1.13%</div>
+                    <div class="sector-meta">
+                        <span>📈 净额: +57.50亿</span>
+                    </div>
+                    <div class="sector-driver">🚀 资金驱动：大单净流入58亿</div>
                 </div>
-
-                <div class="sector-item up">
-                    <div class="sector-rank">#4</div>
-                    <div class="sector-info">
-                        <div class="sector-name">光伏</div>
-                        <div class="sector-leader">领涨：隆基绿能</div>
+                
+                <div class="sector-item">
+                    <div class="sector-header">
+                        <div class="sector-name">
+                            <span class="sector-rank">TOP4</span>
+                            煤炭开采加工
+                        </div>
+                        <div class="sector-change red">↑ +2.98%</div>
                     </div>
-                    <div class="sector-change">+0.47%</div>
+                    <div class="sector-meta">
+                        <span>📈 净额: +21.88亿</span>
+                    </div>
+                    <div class="sector-driver">🚀 资金驱动：大单净流入22亿</div>
                 </div>
-
-                <div class="sector-item up">
-                    <div class="sector-rank">#5</div>
-                    <div class="sector-info">
-                        <div class="sector-name">银行</div>
-                        <div class="sector-leader">领涨：招商银行</div>
+                
+                <div class="sector-item">
+                    <div class="sector-header">
+                        <div class="sector-name">
+                            <span class="sector-rank">TOP5</span>
+                            钢铁
+                        </div>
+                        <div class="sector-change red">↑ +2.75%</div>
                     </div>
-                    <div class="sector-change">+0.40%</div>
-                </div>
-
-                <div class="sector-item down">
-                    <div class="sector-rank">#6</div>
-                    <div class="sector-info">
-                        <div class="sector-name">新能源车</div>
-                        <div class="sector-leader">领涨：比亚迪</div>
+                    <div class="sector-meta">
+                        <span>📈 净额: +33.52亿</span>
                     </div>
-                    <div class="sector-change">-0.53%</div>
-                </div>
-
-                <div class="sector-item down">
-                    <div class="sector-rank">#7</div>
-                    <div class="sector-info">
-                        <div class="sector-name">半导体</div>
-                        <div class="sector-leader">领涨：中芯国际</div>
-                    </div>
-                    <div class="sector-change">-1.05%</div>
-                </div>
-
-                <div class="sector-item down">
-                    <div class="sector-rank">#8</div>
-                    <div class="sector-info">
-                        <div class="sector-name">消费电子</div>
-                        <div class="sector-leader">领涨：立讯精密</div>
-                    </div>
-                    <div class="sector-change">-1.61%</div>
+                    <div class="sector-driver">🚀 资金驱动：大单净流入34亿</div>
                 </div>
             </div>
-        </section>
-
-        <section class="section">
-            <h2>📰 重要新闻 TOP10</h2>
-            <div class="news-list">
-
-                <div class="news-item">
-                    <div class="news-rank">1</div>
-                    <div class="news-content">
-                        <div class="news-title">能源局：保障能源安全稳定供应</div>
-                        <div class="news-meta">
-                            <span class="news-source">能源局</span>
-                            <span class="news-time">03-01 14:22</span>
-                        </div>
-                    </div>
+        </div>
+        
+        <!-- 资金流向 -->
+        <div class="card">
+            <h2><span class="icon">💰</span> 主力资金流向</h2>
+            <div class="money-flow">
+                <div class="flow-section">
+                    <h3>⬆️ 主力净流入</h3>
+                    <div class="flow-item"><span>小金属</span><span class="red">+78.67亿</span></div>
+                    <div class="flow-item"><span>电力</span><span class="red">+57.50亿</span></div>
+                    <div class="flow-item"><span>IT服务</span><span class="red">+54.61亿</span></div>
+                    <div class="flow-item"><span>工业金属</span><span class="red">+52.46亿</span></div>
+                    <div class="flow-item"><span>通信服务</span><span class="red">+33.74亿</span></div>
                 </div>
-
-                <div class="news-item">
-                    <div class="news-rank">2</div>
-                    <div class="news-content">
-                        <div class="news-title">住建部：因城施策支持住房需求</div>
-                        <div class="news-meta">
-                            <span class="news-source">住建部</span>
-                            <span class="news-time">03-01 07:27</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-rank">3</div>
-                    <div class="news-content">
-                        <div class="news-title">证监会：稳步推进全面注册制改革</div>
-                        <div class="news-meta">
-                            <span class="news-source">证监会</span>
-                            <span class="news-time">03-01 09:06</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-rank">4</div>
-                    <div class="news-content">
-                        <div class="news-title">发改委：加大基础设施投资力度</div>
-                        <div class="news-meta">
-                            <span class="news-source">发改委</span>
-                            <span class="news-time">03-01 15:26</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-rank">5</div>
-                    <div class="news-content">
-                        <div class="news-title">人社部：完善社会保障体系</div>
-                        <div class="news-meta">
-                            <span class="news-source">人社部</span>
-                            <span class="news-time">03-01 16:31</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-rank">6</div>
-                    <div class="news-content">
-                        <div class="news-title">国家统计局：PMI 指数保持在扩张区间</div>
-                        <div class="news-meta">
-                            <span class="news-source">统计局</span>
-                            <span class="news-time">03-01 08:33</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-rank">7</div>
-                    <div class="news-content">
-                        <div class="news-title">工信部：推动制造业高端化发展</div>
-                        <div class="news-meta">
-                            <span class="news-source">工信部</span>
-                            <span class="news-time">03-01 19:49</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-rank">8</div>
-                    <div class="news-content">
-                        <div class="news-title">工信部：加快 5G 网络建设应用</div>
-                        <div class="news-meta">
-                            <span class="news-source">工信部</span>
-                            <span class="news-time">03-01 15:26</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-rank">9</div>
-                    <div class="news-content">
-                        <div class="news-title">外汇局：保持人民币汇率基本稳定</div>
-                        <div class="news-meta">
-                            <span class="news-source">外汇局</span>
-                            <span class="news-time">03-01 19:16</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="news-item">
-                    <div class="news-rank">10</div>
-                    <div class="news-content">
-                        <div class="news-title">外汇局：完善跨境资本流动管理</div>
-                        <div class="news-meta">
-                            <span class="news-source">外汇局</span>
-                            <span class="news-time">03-01 10:54</span>
-                        </div>
-                    </div>
+                <div class="flow-section">
+                    <h3>⬇️ 主力净流出</h3>
+                    <div class="flow-item"><span>通信设备</span><span class="green">-101.50亿</span></div>
+                    <div class="flow-item"><span>半导体</span><span class="green">-74.79亿</span></div>
+                    <div class="flow-item"><span>消费电子</span><span class="green">-61.16亿</span></div>
+                    <div class="flow-item"><span>软件开发</span><span class="green">-35.89亿</span></div>
+                    <div class="flow-item"><span>光学光电子</span><span class="green">-29.47亿</span></div>
                 </div>
             </div>
-        </section>
-
-        <section class="section">
-            <h2>📁 历史归档</h2>
-            <div class="archive-list">
-
-                <a href="/daily/20260223.html" class="archive-item">
-                    <span class="archive-date">2026年02月23日</span>
-                    <span class="archive-link">查看 →</span>
-                </a>
-
-                <a href="/daily/20260224.html" class="archive-item">
-                    <span class="archive-date">2026年02月24日</span>
-                    <span class="archive-link">查看 →</span>
-                </a>
-
-                <a href="/daily/20260225.html" class="archive-item">
-                    <span class="archive-date">2026年02月25日</span>
-                    <span class="archive-link">查看 →</span>
-                </a>
-
-                <a href="/daily/20260226.html" class="archive-item">
-                    <span class="archive-date">2026年02月26日</span>
-                    <span class="archive-link">查看 →</span>
-                </a>
-
-                <a href="/daily/20260227.html" class="archive-item">
-                    <span class="archive-date">2026年02月27日</span>
-                    <span class="archive-link">查看 →</span>
-                </a>
-
-                <a href="/daily/20260228.html" class="archive-item">
-                    <span class="archive-date">2026年02月28日</span>
-                    <span class="archive-link">查看 →</span>
-                </a>
+        </div>
+        
+        <!-- 北向资金 -->
+        <div class="card">
+            <h2><span class="icon">🌏</span> 北向资金</h2>
+            <div class="sentiment-grid">
+                <div class="sentiment-item">
+                    <div class="value">2026-02-27</div>
+                    <div class="label">日期</div>
+                </div>
+                <div class="sentiment-item">
+                    <div class="value red">72.81亿</div>
+                    <div class="label">净买额</div>
+                </div>
+                <div class="sentiment-item">
+                    <div class="value">南向</div>
+                    <div class="label">方向</div>
+                </div>
             </div>
-            <div class="archive-more">
-                <a href="/archive.html">查看全部历史 →</a>
+        </div>
+        
+        <!-- 市场情绪 -->
+        <div class="card">
+            <h2><span class="icon">😊</span> 市场情绪</h2>
+            <div class="sentiment-grid">
+                <div class="sentiment-item">
+                    <div class="value red">高涨</div>
+                    <div class="label">热度</div>
+                </div>
+                <div class="sentiment-item">
+                    <div class="value">约850</div>
+                    <div class="label">涨停(估)</div>
+                </div>
+                <div class="sentiment-item">
+                    <div class="value">约50</div>
+                    <div class="label">跌停(估)</div>
+                </div>
             </div>
-        </section>
-
-        <footer>
-            <p>免责声明：本报告仅供参考，不构成投资建议。股市有风险，投资需谨慎。</p>
-            <p class="footer-time">生成时间：2026-03-01 11:44:37</p>
-        </footer>
+            <p style="margin-top: 12px; color: #aaa; font-size: 14px;">市场情绪高涨，热点活跃，小金属、贵金属等周期股受资金追捧</p>
+        </div>
+        
+        <!-- 今日前瞻 -->
+        <div class="card">
+            <h2><span class="icon">🔮</span> 今日前瞻</h2>
+            <div class="outlook-tips">
+                💡 市场情绪高涨，可关注主线龙头，但需注意追高风险。建议关注资金持续流入的有色金属、电力等周期板块。
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>🤖 AI股票早报系统 v2.2 | 数据来源: AKShare</p>
+            <p>生成时间: 2026-03-01 13:30</p>
+        </div>
     </div>
-    <script src="/js/main.js"></script>
 </body>
 </html>

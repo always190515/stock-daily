@@ -1,114 +1,366 @@
 {
-  "date": "20260301",
-  "market": {
-    "sh_close": 3050,
-    "sh_change": 0.5,
-    "sz_close": 9200,
-    "sz_change": 0.8,
-    "cy_close": 1850,
-    "cy_change": 1.2
+  "meta": {
+    "generated_at": "2026-03-01 13:43:20",
+    "report_date": "2026年03月01日",
+    "reporter": "AI股票早报系统 v2.2",
+    "data_source": "AKShare (实时+资金流)",
+    "data_note": "板块数据使用前一交易日资金流数据"
   },
-  "sectors": [
+  "market_overview": {
+    "shanghai": {
+      "name": "上证指数",
+      "close": 4162.8815,
+      "change": 0.392,
+      "volume": "682047646"
+    },
+    "shenzhen": {
+      "name": "深证成指",
+      "close": 14495.093,
+      "change": -0.06,
+      "volume": "78110959637"
+    },
+    "chinese": {
+      "name": "创业板指",
+      "close": 3310.305,
+      "change": -1.037,
+      "volume": "24032083023"
+    },
+    "shanghai_50": {
+      "name": "上证50",
+      "close": 3039.431,
+      "change": 0.144,
+      "volume": "43909783"
+    },
+    "hs300": {
+      "name": "沪深300",
+      "close": 4710.6469,
+      "change": -0.343,
+      "volume": "261420865"
+    }
+  },
+  "active_sectors": [
     {
-      "name": "医药生物",
-      "change": 3.76,
-      "leader": "恒瑞医药",
-      "turnover": "347.3亿"
+      "rank": 1,
+      "name": "小金属",
+      "price_change": 7.41,
+      "turnover": "344.26",
+      "leader_stock": "东方锆业",
+      "leader_change": "10.03",
+      "net_flow": "78.67",
+      "stock_count": 27,
+      "driver": "政策驱动：小金属",
+      "driver_type": "policy",
+      "risk_level": "low",
+      "data_source": "资金流数据 (前交易日)",
+      "sentiment": "高涨"
     },
     {
-      "name": "人工智能",
-      "change": 3.61,
-      "leader": "科大讯飞",
-      "turnover": "280.2亿"
+      "rank": 2,
+      "name": "贵金属",
+      "price_change": 3.32,
+      "turnover": "112.39",
+      "leader_stock": "湖南黄金",
+      "leader_change": "10.01",
+      "net_flow": "22.06",
+      "stock_count": 11,
+      "driver": "",
+      "driver_type": "unknown",
+      "risk_level": "medium",
+      "data_source": "资金流数据 (前交易日)",
+      "sentiment": "活跃"
     },
     {
-      "name": "券商",
-      "change": 1.13,
-      "leader": "中信证券",
-      "turnover": "395.8亿"
+      "rank": 3,
+      "name": "电力",
+      "price_change": 3.25,
+      "turnover": "281.35",
+      "leader_stock": "珈伟新能",
+      "leader_change": "19.91",
+      "net_flow": "57.5",
+      "stock_count": 105,
+      "driver": "政策驱动：电力",
+      "driver_type": "policy",
+      "risk_level": "low",
+      "data_source": "资金流数据 (前交易日)",
+      "sentiment": "活跃"
     },
     {
-      "name": "光伏",
-      "change": 0.47,
-      "leader": "隆基绿能",
-      "turnover": "94.7亿"
+      "rank": 4,
+      "name": "煤炭开采加工",
+      "price_change": 3.25,
+      "turnover": "60.25",
+      "leader_stock": "山西焦化",
+      "leader_change": "6.36",
+      "net_flow": "21.88",
+      "stock_count": 33,
+      "driver": "",
+      "driver_type": "unknown",
+      "risk_level": "medium",
+      "data_source": "资金流数据 (前交易日)",
+      "sentiment": "活跃"
     },
     {
-      "name": "银行",
-      "change": 0.4,
-      "leader": "招商银行",
-      "turnover": "271.1亿"
+      "rank": 5,
+      "name": "钢铁",
+      "price_change": 2.75,
+      "turnover": "157.42",
+      "leader_stock": "杭钢股份",
+      "leader_change": "9.96",
+      "net_flow": "33.52",
+      "stock_count": 43,
+      "driver": "资金驱动：大单净流入34亿",
+      "driver_type": "fund",
+      "risk_level": "low",
+      "data_source": "资金流数据 (前交易日)",
+      "sentiment": "活跃"
     },
     {
-      "name": "新能源车",
-      "change": -0.53,
-      "leader": "比亚迪",
-      "turnover": "334.9亿"
+      "rank": 6,
+      "name": "工业金属",
+      "price_change": 2.75,
+      "turnover": "306.96",
+      "leader_stock": "锌业股份",
+      "leader_change": "9.05",
+      "net_flow": "52.46",
+      "stock_count": 58,
+      "driver": "资金驱动：大单净流入52亿",
+      "driver_type": "fund",
+      "risk_level": "low",
+      "data_source": "资金流数据 (前交易日)",
+      "sentiment": "活跃"
     },
     {
-      "name": "半导体",
-      "change": -1.05,
-      "leader": "中芯国际",
-      "turnover": "261.1亿"
+      "rank": 7,
+      "name": "能源金属",
+      "price_change": 2.73,
+      "turnover": "78.21",
+      "leader_stock": "永兴材料",
+      "leader_change": "10.0",
+      "net_flow": "11.19",
+      "stock_count": 13,
+      "driver": "",
+      "driver_type": "unknown",
+      "risk_level": "medium",
+      "data_source": "资金流数据 (前交易日)",
+      "sentiment": "活跃"
     },
     {
-      "name": "消费电子",
-      "change": -1.61,
-      "leader": "立讯精密",
-      "turnover": "207.2亿"
+      "rank": 8,
+      "name": "燃气",
+      "price_change": 2.64,
+      "turnover": "18.62",
+      "leader_stock": "水发燃气",
+      "leader_change": "10.01",
+      "net_flow": "4.95",
+      "stock_count": 28,
+      "driver": "",
+      "driver_type": "unknown",
+      "risk_level": "medium",
+      "data_source": "资金流数据 (前交易日)",
+      "sentiment": "活跃"
     }
   ],
+  "money_flow": {
+    "main_inflow": [
+      {
+        "name": "小金属",
+        "fund_flow": "+78.67亿",
+        "change": 7.41
+      },
+      {
+        "name": "电力",
+        "fund_flow": "+57.50亿",
+        "change": 3.25
+      },
+      {
+        "name": "IT服务",
+        "fund_flow": "+54.61亿",
+        "change": 2.34
+      },
+      {
+        "name": "工业金属",
+        "fund_flow": "+52.46亿",
+        "change": 2.75
+      },
+      {
+        "name": "通信服务",
+        "fund_flow": "+33.74亿",
+        "change": 2.21
+      },
+      {
+        "name": "钢铁",
+        "fund_flow": "+33.52亿",
+        "change": 2.75
+      },
+      {
+        "name": "贵金属",
+        "fund_flow": "+22.06亿",
+        "change": 3.32
+      },
+      {
+        "name": "煤炭开采加工",
+        "fund_flow": "+21.88亿",
+        "change": 3.25
+      },
+      {
+        "name": "光伏设备",
+        "fund_flow": "+17.93亿",
+        "change": 2.31
+      },
+      {
+        "name": "光学光电子",
+        "fund_flow": "+14.63亿",
+        "change": 0.25
+      }
+    ],
+    "main_outflow": [
+      {
+        "name": "电池",
+        "fund_flow": "-20.51亿",
+        "change": 0.02
+      },
+      {
+        "name": "电子化学品",
+        "fund_flow": "-20.71亿",
+        "change": -1.18
+      },
+      {
+        "name": "白色家电",
+        "fund_flow": "-21.37亿",
+        "change": -0.04
+      },
+      {
+        "name": "军工电子",
+        "fund_flow": "-29.15亿",
+        "change": -0.11
+      },
+      {
+        "name": "汽车零部件",
+        "fund_flow": "-33.93亿",
+        "change": -0.15
+      },
+      {
+        "name": "电网设备",
+        "fund_flow": "-35.72亿",
+        "change": 0.28
+      },
+      {
+        "name": "元件",
+        "fund_flow": "-56.66亿",
+        "change": -1.4
+      },
+      {
+        "name": "消费电子",
+        "fund_flow": "-61.16亿",
+        "change": 0.08
+      },
+      {
+        "name": "半导体",
+        "fund_flow": "-74.79亿",
+        "change": -0.47
+      },
+      {
+        "name": "通信设备",
+        "fund_flow": "-101.50亿",
+        "change": 0.01
+      }
+    ],
+    "north_money": {
+      "amount": "72.80747",
+      "direction": "南向"
+    }
+  },
+  "stock_fund_flow": [],
   "news": [
     {
-      "title": "能源局：保障能源安全稳定供应",
-      "source": "能源局",
-      "time": "03-01 14:22"
+      "title": "平安银行聘任首席合规官，由首席风险官吴雷鸣兼任",
+      "time": "2025-12-19 15:40:15",
+      "source": "新浪"
     },
     {
-      "title": "住建部：因城施策支持住房需求",
-      "source": "住建部",
-      "time": "03-01 07:27"
+      "title": "两大行共发近千亿现金红利，多家银行“红包”正在路上",
+      "time": "2025-12-15 23:29:53",
+      "source": "新浪"
     },
     {
-      "title": "证监会：稳步推进全面注册制改革",
-      "source": "证监会",
-      "time": "03-01 09:06"
+      "title": "上市银行三季报密集披露：公允价值变动收益下降 资产质量持续改善",
+      "time": "2025-10-28 21:59:54",
+      "source": "新浪"
     },
     {
-      "title": "发改委：加大基础设施投资力度",
+      "title": "工信部：加快推动人工智能赋能新型工业化",
+      "source": "工信部",
+      "time": "08:30",
+      "type": "policy"
+    },
+    {
+      "title": "国务院：印发《新能源高质量发展行动计划》",
+      "source": "国务院",
+      "time": "09:15",
+      "type": "政策"
+    },
+    {
+      "title": "发改委：下达2024年第一批中央预算内投资",
       "source": "发改委",
-      "time": "03-01 15:26"
-    },
-    {
-      "title": "人社部：完善社会保障体系",
-      "source": "人社部",
-      "time": "03-01 16:31"
-    },
-    {
-      "title": "国家统计局：PMI 指数保持在扩张区间",
-      "source": "统计局",
-      "time": "03-01 08:33"
-    },
-    {
-      "title": "工信部：推动制造业高端化发展",
-      "source": "工信部",
-      "time": "03-01 19:49"
-    },
-    {
-      "title": "工信部：加快 5G 网络建设应用",
-      "source": "工信部",
-      "time": "03-01 15:26"
-    },
-    {
-      "title": "外汇局：保持人民币汇率基本稳定",
-      "source": "外汇局",
-      "time": "03-01 19:16"
-    },
-    {
-      "title": "外汇局：完善跨境资本流动管理",
-      "source": "外汇局",
-      "time": "03-01 10:54"
+      "time": "10:00",
+      "type": "政策"
     }
   ],
-  "source": "china-stock-mcp"
+  "sentiment": {
+    "hot_level": "高涨",
+    "turnover_rate": "2.5%",
+    "涨停数量": 0,
+    "跌停数量": 0,
+    "上涨家数": 1000,
+    "下跌家数": 0,
+    "情绪解读": "市场情绪高涨，热点活跃，平均涨幅4.0%，注意追高风险"
+  },
+  "north_money": {
+    "summary": {
+      "date": "2026-02-27",
+      "net_buy": "72.80747",
+      "direction": "南向"
+    },
+    "minute_data": 241
+  },
+  "summary": {
+    "main_line": "小金属 (+7.41%)",
+    "description": "政策驱动：小金属",
+    "top_sector": "小金属",
+    "top_change": 7.41,
+    "hot_sectors": [
+      "小金属",
+      "贵金属",
+      "电力"
+    ],
+    "funding_direction": "小金属"
+  },
+  "outlook": {
+    "possible_hotspots": [
+      {
+        "name": "小金属",
+        "source": "主力净流入+78.67亿",
+        "confidence": "高"
+      }
+    ],
+    "risk_alerts": [
+      {
+        "sector": "贵金属",
+        "reason": "无明确驱动因素"
+      },
+      {
+        "sector": "煤炭开采加工",
+        "reason": "无明确驱动因素"
+      },
+      {
+        "sector": "能源金属",
+        "reason": "无明确驱动因素"
+      },
+      {
+        "sector": "燃气",
+        "reason": "无明确驱动因素"
+      }
+    ],
+    "trading_tips": "市场情绪高涨，可关注主线龙头，但需注意追高风险"
+  }
 }
