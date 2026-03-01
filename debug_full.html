@@ -1,0 +1,1631 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="referrer" content="always"><meta name="sinfo" data-bz="STime: 2026-03-01 19:28:50 SNum: 128"><title>行情中心：国内快捷全面的股票、基金、期货、美股、港股、外汇、黄金、债券行情系统_东方财富网</title><meta name="keywords" content="沪深股市, 沪深A股, 沪深指数, 创业板行情, 期指行情, 板块, 排行, 香港股市, 美股行情, 港股行情, 全球指数, 基金净值, 基金估值, ETF, LOF, 基金行情, 期货行情, 外汇, 人民币中间价, 外汇牌价, 汇率, 黄金, 黄金期货, 黄金现货, 纸黄金, 国际贵金属期货, 债券指数, 国债, 企债, 转债, 银行间市场, 上证回购, 深证回购 "><meta name="description" content="东方财富网行情中心提供权威、全面、专业、及时的行情数据，将沪深股市实时行情、港股行情、全球股市走势、权证、基金行情、期货行情、外汇行情、债券行情、黄金行情进行优化整合、为投资者搭建了一个可以纵览全球行情的重要平台，为您的投资提供重要依据。"><base target="_blank"><link rel="stylesheet" href="./static/build/index.css"><link rel="stylesheet" href="//emcharts.eastmoney.com/suggest/stocksuggest2017.css"><style type="text/css">.__emchatrs3_root_box {
+  position: relative;
+  font-family: "Arial,'Microsoft Yahei'";
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.__emchatrs3_root_box .__indextip {
+  position: absolute;
+  width: 100px;
+  padding: 5px;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  pointer-events: none;
+}
+.__emchatrs3_root_box .__indextip a {
+  pointer-events: auto;
+}
+.__emchatrs3_root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}
+.__emchatrs3_root .__ui,
+.__emchatrs3_root .__canvas,
+.__emchatrs3_root canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.__emchatrs3_root .__ui {
+  z-index: 5 !important;
+  background-image: url("data:image/gif; base64,AAAA");
+}
+.__pop {
+  position: absolute;
+  display: none;
+  padding: 10px;
+  font-size: 12px;
+}
+.__pop > div a,
+.__pop > div p {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.__pop > div a:hover {
+  color: #ff4901;
+}
+.__pop_dft {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+.__pop_dft span {
+  margin-left: 10px;
+}
+.__emchatrs3_root_box * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.__em_minimap {
+  clear: both;
+}
+.__emchatrs3_root_box .__ui {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.001);
+}
+.__emchatrs3_root_box .__dotspoint {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0;
+  overflow: visible;
+  z-index: 15;
+  user-select: none;
+}
+.__emchatrs3_root_box .__dotspoint span {
+  margin-right: 4px;
+}
+.__emchatrs3_root_box .__dotspoint .__pop {
+  position: absolute;
+  background-color: #fff;
+  padding: 5px 5px;
+  font-size: 12px;
+  color: #333333;
+  border: 1px solid #65CAFE;
+  z-index: 15;
+}
+.__emchatrs3_root_box .__dotspoint .__dotgroup {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0;
+  overflow: visible;
+}
+.__emchatrs3_root_box .__dotspoint .__dotgroup > div {
+  position: absolute;
+  cursor: pointer;
+}
+.__emchatrs3_root_box .__dotspoint .__dotgroup > div img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.__emchatrs3_root_box .__canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.__emchatrs3_root_box .__canvas canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 5;
+}
+/* 主图指标 */
+.__emchatrs3_root_box .__quota {
+  position: absolute;
+  color: #5F5F5F;
+  width: 60px;
+  right: 0;
+  background: #ffffff;
+}
+.__emchatrs3_root_box .__qtip {
+  font-size: 12px;
+  font-family: "simsun";
+  padding: 2px 0;
+  vertical-align: middle;
+  width: 65px;
+  overflow: visible;
+}
+.__emchatrs3_root_box .__qtip span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.__emchatrs3_root_box .__qtip label {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 4px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #dddddd;
+}
+.__emchatrs3_root_box .__qtip label::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 3px solid rgba(0, 0, 0, 0);
+  border-left: 3px solid #666666;
+  border-bottom: 3px solid #666666;
+  transform: rotate(-45deg);
+  left: 3px;
+  top: 1px;
+}
+.__emchatrs3_root_box .kt-pad {
+  padding-top: 8px;
+}
+.__emchatrs3_root_box .kt-title {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.__emchatrs3_root_box .kt-line {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.__emchatrs3_root_box .kt-radio-wrap {
+  position: relative;
+  border: solid 1px #305896;
+  height: 10px;
+  width: 10px;
+}
+.__emchatrs3_root_box .kt-radio-wrap div {
+  position: absolute;
+  display: none;
+  margin: 2px;
+  width: 6px;
+  height: 6px;
+  background-color: #305896;
+}
+.__emchatrs3_root_box .kt-radio-choose div {
+  display: block !important;
+}
+.__emchatrs3_root_box .kt-name {
+  position: absolute;
+  color: #555;
+  line-height: 18px;
+  height: 16px;
+  top: -3px;
+  left: 15px;
+  font-family: "simsun";
+}
+.__emchatrs3_root_box .__technologyindex {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  background-color: #888888;
+}
+.__emchatrs3_root_box .__technologyindex::after {
+  content: "";
+  display: block;
+  clear: bton;
+}
+.__emchatrs3_root_box .__technologyindex li {
+  float: left;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 100;
+  font-family: simsun;
+}
+.__emchatrs3_root_box .__technologyindex_act {
+  background-color: #aaaaaa;
+}
+.__emchatrs3_root_box .__em_minimap {
+  position: absolute;
+  bottom: 0;
+  z-index: 30;
+  overflow: visible;
+}
+.__emchatrs3_root_box .__slidebar {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: move;
+}
+.__emchatrs3_root_box .__em_minimap .__sb_left,
+.__emchatrs3_root_box .__em_minimap .__sb_right {
+  position: absolute;
+  cursor: w-resize;
+  width: 10px;
+  height: 50%;
+  top: 25%;
+  background-color: #999999;
+}
+.__emchatrs3_root_box .__em_minimap .__sb_left {
+  left: -5px;
+}
+.__emchatrs3_root_box .__em_minimap .__sb_right {
+  right: -5px;
+}
+.__emchatrs3_root_box .__popfloatwin {
+  position: absolute;
+  display: none;
+  border: 1px solid #97c8ff;
+  width: 120px;
+  font-size: 12px;
+  background-color: #ffffff;
+  color: #999999;
+  padding-bottom: 5px;
+  top: 30px;
+  z-index: 50;
+  cursor: move;
+  font-family: Arial,'Microsoft Yahei', Helvetica, sans-serif;
+}
+.__emchatrs3_root_box .__popfloatwin h4 {
+  color: #333333;
+  background-color: #edf5ff;
+  margin: 0;
+  padding: 4px 0;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.__emchatrs3_root_box .__popfloatwin h4 label,
+.__emchatrs3_root_box .__popfloatwin h4 span {
+  display: block;
+  text-align: center;
+  cursor: move;
+}
+.__emchatrs3_root_box .__popfloatwin h4 label {
+  color: red;
+}
+.__emchatrs3_root_box .__popfloatwin h4 span {
+  color: #333333;
+}
+.__emchatrs3_root_box .__popfloatwin div {
+  position: relative;
+  padding: 0 10px;
+  margin-bottom: 2px;
+}
+.__emchatrs3_root_box .__popfloatwin div label {
+  color: #999999;
+  display: inline-block;
+  height: 14px;
+  line-height: 14px;
+}
+.__emchatrs3_root_box .__popfloatwin div span {
+  float: right;
+  text-align: right;
+  display: inline-block;
+  height: 14px;
+  line-height: 14px;
+}
+.__emchatrs3_root_box .__rise {
+  color: red;
+}
+.__emchatrs3_root_box .__fall {
+  color: green;
+}
+.__emchatrs3_root_box .__hold {
+  color: #333333;
+}
+.__emchatrs3_root_box .__popwin_tendency {
+  position: absolute;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 12px;
+  font-size: 14px;
+  -webkit-transition-duration: 0.1s;
+  z-index: 60;
+}
+.__emchatrs3_root_box .__popwin {
+  position: absolute;
+  display: none;
+  z-index: 40;
+}
+.__emchatrs3_root_box .__default {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 10px;
+  pointer-events: none;
+}
+.__emchatrs3_root_box .__default h4 {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.__emchatrs3_root_box .__default div {
+  font-size: 14px;
+}
+.__emchatrs3_root_box .__default div i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.__emchatrs3_root_box .__default div label {
+  margin-right: 5px;
+}
+.__emchatrs3_root_box .__popwin_style {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  font-size: 12px;
+  color: #fff;
+}
+.__emchatrs3_root_box .__popwin_style .__strong {
+  font-weight: 900;
+}
+.__emchatrs3_root_box .__popwin_style .__poplist div {
+  margin: 5px 0;
+}
+.__emchatrs3_root_box .__popwin_style .__poplist div > label {
+  margin-right: 5px;
+}
+.__emchatrs3_root_box .__popwin_tendency h4 {
+  margin: 0;
+  text-align: center;
+  color: #ffffff;
+  /* min-width: 120px; */
+}
+.__emchatrs3_root_box .__popwin_tendency div {
+  margin-top: 5px;
+  color: #fafafa;
+}
+.__emchatrs3_root_box .__popwin_default div {
+  color: #fafafa;
+}
+.__emchatrs3_root_box .__points {
+  position: absolute;
+  /* width: 100%; */
+  /* height: 100%; */
+  overflow: visible;
+  z-index: 30;
+}
+.__emchatrs3_root_box .__points div {
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+  /* pointer-events:none; */
+}
+.__emchatrs3_root_box .__points div div {
+  background-color: inherit;
+  position: absolute;
+  display: block;
+  width: 70%;
+  height: 70%;
+  top: 15%;
+  left: 15%;
+  border-radius: 50%;
+}
+.__emchatrs3_root_box .__popwin_mini {
+  position: absolute;
+  display: none;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 2px 6px;
+  border: 1px solid #9B9B9B;
+  font-size: 12px;
+  pointer-events: none;
+  opacity: 0.9;
+}
+.__emchatrs3_root_box .__popwin_line {
+  position: absolute;
+  display: none;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 8px 10px;
+  border: 1px solid #9B9B9B;
+  font-size: 12px;
+  pointer-events: none;
+  opacity: 0.9;
+}
+.__emchatrs3_root_box .__popwin_line > div {
+  font-size: 14px;
+  padding: 0;
+  color: #333333;
+}
+.__emchatrs3_root_box .__popwin_mini > div {
+  color: #333333;
+}
+.__emchatrs3_root_box .__layerText {
+  display: none;
+}
+.__emchatrs3_root_box:hover .__layerText {
+  display: block;
+}
+.__emchatrs3_root_box .__positionChanges div {
+  position: absolute;
+  border-radius: 50%;
+  transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  width: 6px;
+  height: 6px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.__emchatrs3_root_box .__positionChanges div:hover {
+  margin-left: -2px;
+  margin-top: -2px;
+  width: 10px;
+  height: 10px;
+}
+/*盘口异动的数据最后一条闪烁*/
+.timePositionChangesAni {
+  animation: timePositionChangesAni 0.7s infinite linear alternate;
+  -webkit-animation: timePositionChangesAni 0.7s infinite linear alternate;
+  -ms-animation: timePositionChangesAni 0.7s infinite linear alternate;
+}
+@keyframes timePositionChangesAni {
+  0% {
+    width: 6px;
+    height: 6px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  100% {
+    width: 10px;
+    height: 10px;
+    margin-top: -2px;
+    margin-left: -2px;
+  }
+}
+@-webkit-keyframes timePositionChangesAni {
+  0% {
+    width: 6px;
+    height: 6px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  100% {
+    width: 10px;
+    height: 10px;
+    margin-top: -2px;
+    margin-left: -2px;
+  }
+}
+@-ms-keyframes timePositionChangesAni {
+  0% {
+    width: 6px;
+    height: 6px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  100% {
+    width: 10px;
+    height: 10px;
+    margin-top: -2px;
+    margin-left: -2px;
+  }
+}
+/* 盘口异动浮窗 */
+.__emchatrs3_root_box .__positionChangePop {
+  position: absolute;
+  width: 154px;
+  border: 1px solid #65CAFE;
+  height: 50px;
+  background-color: #ffffff;
+  font-size: 12px;
+  color: #666666;
+}
+.__emchatrs3_root_box .__positionChangePop::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 8px solid #65CAFE;
+  border-left: 8px solid #65CAFE;
+  border-bottom: 8px solid rgba(0, 0, 0, 0);
+  border-right: 8px solid rgba(0, 0, 0, 0);
+  left: 50%;
+  z-index: 2;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  top: -8px;
+  margin-left: -8px;
+}
+.__emchatrs3_root_box .__positionChangePop > div {
+  float: left;
+  height: 40px;
+  width: 77px;
+  padding: 5px 0;
+}
+.__emchatrs3_root_box .__positionChangePop > div:first-child {
+  background-color: #D1E7FF;
+}
+.__emchatrs3_root_box .__positionChangePop img {
+  display: block;
+  height: 25x;
+  margin: 0 auto;
+}
+.__emchatrs3_root_box .__positionChangePop label {
+  display: block;
+  height: 20px;
+  margin-top: 5px;
+  text-align: center;
+}
+.__emchatrs3_root_box .__positionChangePop span {
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+.__emchatrs3_root_box .__em_loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: 30;
+}
+.__emchatrs3_root_box .__em_loading img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -39px;
+  margin-top: -50px;
+  display: block;
+}
+.__emchatrs3_cmfb {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+.__emchatrs3_cmfb > div {
+  position: relative;
+  font-size: 14px;
+  color: #333333;
+}
+.__emchatrs3_cmfb > div label {
+  display: inline-block;
+  width: 90%;
+}
+.__emchatrs3_cmfb > div span {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  text-align: right;
+}
+.__emchatrs3_cmfb .ratio {
+  line-height: 18px !important;
+}
+.__emchatrs3_cmfb .ratio label {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.__emchatrs3_cmfb .ratio span {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-left: none !important;
+}
+.__emchatrs3_cmfb .ratio label,
+.__emchatrs3_cmfb .ratio span {
+  text-align: center;
+  box-sizing: border-box;
+  padding: 3px 0;
+}
+</style><style>.miniquotechart {
+  font-family: Arial;
+  position: relative;
+  color: #333;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+}
+
+.miniquotechart .c_up {
+  fill: #ff030f;
+}
+
+.miniquotechart .c_down {
+  fill: #00811f;
+}
+
+.miniquotechart .c_draw {
+  fill: #333333;
+}
+
+.miniquotechart .out_border {
+  fill: transparent;
+  stroke: #b9d4e7;
+}
+
+.miniquotechart .timeshadow {
+  fill: #f2faff;
+}
+
+.miniquotechart .topinfo {
+  fill: #333;
+  font-weight: bold;
+  width: 100px;
+}
+
+.miniquotechart .x_cross_div{
+  border-top: 1px dashed #666;
+  position: absolute;
+  height: 0px;
+  user-select: none;
+  display: none;
+  pointer-events: none;
+}
+
+.miniquotechart .y_cross_div{
+  border-left: 1px dashed #666;
+  position: absolute;
+  display: none;
+  width: 0px;
+  pointer-events: none;
+}
+
+.miniquotechart .time_ui_c {
+  position: absolute;
+}
+
+.miniquotechart .y_cross_time{
+  position: absolute;
+  background-color: #ddd;
+  text-align: center;
+  padding: 0 2px;
+}
+
+
+.miniquotechart .y_cross_k_time {
+  position: relative;
+  background-color: #ddd;
+  text-align: center;
+  padding: 0 2px;
+  white-space: nowrap;
+}
+
+.miniquotechart .infobox_border {
+  stroke: #ccc;
+  stroke-dasharray: 4 2;
+}
+
+.miniquotechart .middle_time_line {
+  stroke: #ccc;
+  stroke-dasharray: 4 2;
+}
+
+.miniquotechart .average_border {
+  stroke: #ccc;
+}
+
+.miniquotechart .info_price {
+  font-weight: bold;
+}
+
+.miniquotechart .time_path {
+  stroke: #0065d6;
+  fill: transparent;
+}
+
+.miniquotechart .average_path {
+  stroke: #f6d767;
+  fill: transparent;
+}
+
+.miniquotechart .average_path_ma5 {
+  stroke: #376cff;
+  fill: transparent;
+}
+
+.miniquotechart .average_path_ma10 {
+  stroke: #de9d0b;
+  fill: transparent;
+}
+
+.miniquotechart .x_cross_div_k {
+  border-top: 1px dashed #666;
+  position: absolute;
+  height: 0px;
+  user-select: none;
+  display: none;
+  pointer-events: none;
+}
+
+.miniquotechart .y_cross_div_k {
+  position: relative;
+  border-left: 1px dashed #666;
+  display: none;
+  width: 0px;
+  pointer-events: none;
+}
+
+
+.miniquotechart .infobox_border_k {
+  stroke: #ccc;
+  stroke-dasharray: 4 2;
+}
+
+.miniquotechart .info_ma5 {
+  font-weight: bold;
+  fill: #376cff !important;
+}
+
+.miniquotechart .info_ma10 {
+  font-weight: bold;
+  fill: #de9d0b !important;
+}
+
+.miniquotechart .k_rect_up {
+  stroke: red !important;
+  fill: #fff;
+}
+
+.miniquotechart .k_rect_up_fill {
+  fill: red !important;
+}
+
+.miniquotechart .k_rect_down {
+  stroke: #009900 !important;
+  fill: #009900 !important;
+}
+
+.miniquotechart .k_rect_flat {
+  fill: #000 !important;
+}
+
+.miniquotechart .k_line_up {
+  stroke: red !important;
+}
+
+.miniquotechart .k_line_down {
+  stroke: #009900 !important;
+}
+
+.miniquotechart .k_line_flat {
+  stroke: #000 !important;
+}
+
+.miniquotechart .y_cross_info {
+  display: none;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #9b9b9b;
+  border-radius: 4px;
+  top: 40%;
+  transform: translateY(-40%);
+  padding: 2px 5px;
+  white-space: nowrap;
+  /* font-size: 16px; */
+  pointer-events: none;
+}
+
+.miniquotechart .y_cross_info_detail {
+  vertical-align: middle;
+  overflow: hidden;
+
+}
+
+.miniquotechart .y_cross_info .y_cross_info_detail  div {
+  overflow: hidden;
+}
+
+.miniquotechart .y_cross_info .y_cross_info_detail  div span:nth-child(1){
+  float: left;
+}
+
+.miniquotechart .y_cross_info .y_cross_info_detail  div span:nth-child(2){
+  float: right;
+}
+
+.miniquotechart .y_cross_info_detail .rise {
+  color: red !important;
+}
+
+.miniquotechart .y_cross_info_detail .fall {
+  color: #009900 !important;
+}
+
+</style><style>* {
+  margin: 0;
+  padding: 0;
+}
+
+._emui_quote_chart {
+  position: relative;
+}
+
+._emui_quote_chart .red {
+  color: #ff030f;
+}
+
+._emui_quote_chart .green {
+  color: #00811f;
+}
+
+._emui_quote_chart svg {
+  border: 1px solid darkgrey;
+}
+
+._emui_quote_chart .line_path {
+  stroke: #ff0000;
+  fill: transparent;
+}
+._emui_quote_chart .line_path_shadow {
+  /* stroke: #666; */
+  /* fill: #ea5404; */
+}
+._emui_quote_chart .line_red {
+  stroke: #ff0000;
+  fill: transparent;
+}
+
+._emui_quote_chart .line_green {
+  stroke: #00811f;
+  fill: transparent;
+}
+
+._emui_quote_chart .inner_border {
+  fill: transparent;
+  stroke: #b9d4e7;
+}
+
+._emui_quote_chart .grid_dash_line {
+  stroke: #ccc;
+  stroke-dasharray: 4 2;
+}
+
+._emui_quote_chart .point_txt {
+  fill: #474747;
+}
+
+._emui_quote_chart ._ui_chart_ctr {
+  position: absolute;
+}
+
+._emui_quote_chart ._ui_chart_ctr .x_move_line {
+  border-left: 1px dashed #999;
+  position: absolute;
+  display: none;
+  width: 0px;
+  pointer-events: none;
+}
+._emui_quote_chart ._ui_chart_ctr .y_move_line {
+  border-top: 1px dashed #666;
+  position: absolute;
+  height: 0px;
+  user-select: none;
+  display: none;
+  pointer-events: none;
+}
+
+._emui_quote_chart ._ui_chart_ctr ._ui_tip_info {
+  position: absolute;
+  display: none;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 8px 10px;
+  border: 1px solid #9B9B9B;
+  font-size: 14px;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+._emui_quote_chart ._ui_chart_ctr ._ui_tip_info ._tip_txt {
+  font-size: 14px;
+}
+
+._emui_quote_chart ._ui_chart_ctr .xy_dot_div {
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #f3c8c8;
+  border-radius: 50%;
+
+}
+
+._emui_quote_chart ._ui_chart_ctr .xy_dot_div:after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #ff0000;
+}
+._emui_quote_chart .zjl_txt{
+  fill: #666;
+}
+/* ._emui_quote_chart .zjl_num{
+  fill: #ff0000;
+} */
+
+
+._emui_quote_chart ._ui_chart_ctr ._ui_tip_zjlinfo {
+  position: absolute;
+  display: none;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 8px 10px;
+  border: 1px solid #9B9B9B;
+  font-size: 12px;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+._emui_quote_chart .zjl_mid_tip{
+  fill: #999;
+  font-size: 16px;
+}
+
+/* 饼状 */
+._emui_quote_chart ._em_svg_circle_box{
+  transform:rotate(-90deg);
+  border-radius: 50%;
+  background-color: lightskyblue;
+}
+</style><script src="https://push2.eastmoney.com/api/qt/stock/get?cb=quotedelaytip0"></script><script src="https://emcharts.dftzj.com/quotedelaytip/quotedelaytip.js"></script><style>.popwscps_d_shadow{z-index:20000;background:rgba(0,0,0,.5);width:100%;height:100%;position:fixed;top:0;left:0}.popwscps_d_iframe{z-index:20001;background:#fff;border:none;border-radius:5px;width:282px;height:328px;position:fixed;top:50%;left:50%;overflow:hidden;-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);box-shadow:0 0 10px rgba(0,0,0,.5)}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9wYWdlanMvcG9wLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQSxtQkFBQSxhQUFBLENBQUEseUJBQUEsQ0FBQSxVQUFBLENBQUEsV0FBQSxDQUFBLGNBQUEsQ0FBQSxLQUFBLENBQUEsTUFBQSxDQVVBLG1CQUFBLGFBQUEsQ0FBQSxlQUFBLENBQUEsV0FBQSxDQUFBLGlCQUFBLENBQUEsV0FBQSxDQUFBLFlBQUEsQ0FBQSxjQUFBLENBQUEsT0FBQSxDQUFBLFFBQUEsQ0FBQSxlQUFBLENBQUEsa0NBQUEsQ0FBQSw4QkFBQSxDQUFBLGtDQUFBIiwic291cmNlc0NvbnRlbnQiOlsiLyogLnBvcHdzY3BzX2R7XHJcbn0gKi9cclxuXHJcbi5wb3B3c2Nwc19kX3NoYWRvd3tcclxuICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgdG9wOiAwO1xyXG4gIGxlZnQ6IDA7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcclxuICB6LWluZGV4OiAyMDAwMDtcclxufVxyXG5cclxuLnBvcHdzY3BzX2RfaWZyYW1le1xyXG4gIHBvc2l0aW9uOiBmaXhlZDtcclxuICB0b3A6IDUwJTtcclxuICBsZWZ0OiA1MCU7XHJcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XHJcbiAgd2lkdGg6IDI4MnB4O1xyXG4gIGhlaWdodDogMzI4cHg7XHJcbiAgYmFja2dyb3VuZDogI2ZmZjtcclxuICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gIGJvcmRlcjpub25lO1xyXG4gIGJvcmRlci1yYWRpdXM6IDVweDtcclxuICBib3gtc2hhZG93OiAwIDAgMTBweCByZ2JhKDAsIDAsIDAsIDAuNSk7XHJcbiAgei1pbmRleDogMjAwMDE7XHJcbn1cclxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>body {
+  margin-top: 43px;
+}
+
+.topnavmain {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+html,
+html body {
+  _background-image: url(about:blank);
+  _background-attachment: fixed;
+}
+
+.top-nav-wrap ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.top-nav-wrap {
+  font-size: 12px;
+  font-family: simsun;
+  height: 30px;
+  background-color: #f7f7f7;
+  border-top: 2px solid #ff4901;
+  border-bottom: 1px solid #dfdfdf;
+  position: fixed !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+  _top: expression(eval(document.documentElement.scrollTop));
+  z-index: 99999;
+  width: 100%;
+  min-width: 1000px;
+}
+
+.top-nav-wrap .topnavmain {
+  background-color: #F7F7F7;
+}
+
+.tw-nav {
+  height: 30px;
+  float: left;
+}
+
+.top-nav-wrap a,
+.top-nav-wrap .down-menu {
+  float: left;
+}
+
+.top-nav-wrap a:link,
+.top-nav-wrap a:visited {
+  height: 16px;
+  padding: 7px 3px;
+  line-height: 16px;
+  background-color: none;
+  color: #000;
+  text-decoration: none;
+}
+
+.top-nav-wrap span.red a {
+  color: #ff4901;
+}
+
+.top-nav-wrap a:hover {
+  background-color: #eaeaea;
+  text-decoration: none;
+}
+
+.down-menu ul li span{
+  height: 31px;
+  display: block;
+  line-height: 31px;
+  text-align: center;
+  background: #fff;
+  margin: 1px;
+}
+
+.down-menu {
+  position: relative;
+  width: 87px;
+}
+
+.down-menu.wz0 {
+  width: auto;
+}
+
+.down-menu.wz2 {
+  width: 64px;
+}
+
+.down-menu.wz3 {
+  width: 70px;
+}
+
+.down-menu.wz4 {
+  width: 82px;
+}
+
+.down-menu.wz6 {
+  width: 105px;
+}
+
+.down-menu .category {
+  background-image: url(https://g1.dfcfw.com/g2/201607/20160725145137.png);
+  background-repeat: no-repeat;
+  background-position: right 13px;
+  padding: 7px 0;
+  display: block;
+  float: none;
+  text-align: center;
+  text-indent: -8px;
+}
+
+.down-menu .category.red {
+  color: #ff4900 !important;
+}
+
+.down-menu ul,
+.down-menu .loginBox {
+  clear: both;
+  background: #b3d0e4;
+  padding-bottom: 1px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+  display: none;
+}
+
+.down-menu ul li a {
+  background-color: #fff;
+  margin: 1px;
+  margin-top: 0;
+  padding: 6px 0;
+  display: block;
+  text-align: center;
+  float: none;
+}
+
+.down-menu a:hover {
+  color: #ff4901;
+}
+
+.down-menu ul li {
+  width: 100%;
+}
+
+.down-menu ul li.tit {
+  text-align: center;
+  font-weight: bold;
+}
+
+.down-menu ul li .red {
+  color: #ff4901;
+}
+.down-menu ul li .red a {
+  color: #ff4901;
+}
+
+.down-menu ul li .blue {
+  color: #039;
+}
+.down-menu ul li .blue a {
+  color: #039;
+}
+
+.down-menu ul li .lightred {
+  color: #F90;
+}
+.down-menu ul li .lightred a {
+  color: #F90;
+}
+
+.down-menu ul li .lightblue {
+  color: #2860FF;
+}
+.down-menu ul li .lightblue a {
+  color: #2860FF;
+}
+
+.down-menu ul li .gray {
+  color: #6B6B6B;
+}
+.down-menu ul li .gray a {
+  color: #6B6B6B;
+}
+
+.down-menu ul li .black {
+  color: #000;
+}
+.down-menu ul li .black a {
+  color: #000;
+}
+
+
+.down-menu ul li a:hover {
+  color: #ff4900;
+}
+
+.down-menu ul li.tit span {
+  background-color: #f7f7f7;
+  margin: 1px;
+  margin-top: 0;
+  padding: 6px 0;
+  display: block;
+  zoom: 1;
+}
+
+.down-menu.wz5 ul,
+.down-menu.wz5 ul li {
+  width: 145px;
+}
+
+.down-menu.wz2 ul,
+.down-menu.wz2 ul li {
+  width: 105px;
+}
+
+.down-menu.wz4 ul,
+.down-menu.wz4 ul li {
+  width: 105px;
+}
+
+.tw-login {
+  float: right;
+  text-align: right;
+}
+
+.down-menu.show ul,
+.down-menu.show .loginBox {
+  display: block;
+}
+
+.down-menu.show .category {
+  background-color: #eaeaea;
+}
+
+.down-menu .userinfo {
+  color: #ff4901;
+  height: 30px;
+  line-height: 17px;
+  width: 160px;
+}
+
+.down-menu .userinfo a {
+  margin: 0;
+  padding: 0;
+  float: none;
+  color: #ff4901;
+  text-indent: 0 !important;
+  display: inline-block !important;
+  padding: 7px 4px;
+}
+
+.down-menu .userinfo cite {
+  display: inline-block;
+  padding: 7px 0;
+  font-style: normal;
+}
+
+.down-menu .userinfo a.usernick {
+  padding-right: 16px;
+  background-position: right -355px;
+}
+
+.down-menu .userinfo .user-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.down-menu .userinfo .user-menu-list {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  border: 1px solid #b3d0e4;
+}
+
+.down-menu .userinfo .user-menu-list div {
+  background-color: #FFF;
+  padding: 14px;
+  color: #000;
+  width: 120px;
+  text-align: left;
+}
+
+.down-menu .user-menu-list dt,
+.user-menu-list dd {
+  float: left;
+  margin: 0;
+  height: 16px;
+  line-height: 16px;
+  margin: 2px 0;
+  width: 60px;
+  overflow: hidden;
+}
+
+.down-menu .user-menu-list dt {
+  clear: both;
+}</style><link rel="stylesheet" href="//emcharts.eastmoney.com/newsts/css/ts.css"><style>#quotedelaytip_mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#quotedelaytip_body{
+  box-sizing: border-box;
+  padding: 15px;
+  font-size: 12px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 100000;
+  width: 300px;
+  margin-left: -150px;
+  margin-top: -100px;
+  background-color: #fff;
+  border: 1px solid #999;
+}
+
+.quotedelaytip_close{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-family: Arial;
+  
+  /* border: 1px solid gray; */
+}
+.quotedelaytip_close:hover{
+  background-color: #ddd;
+}
+
+.quotedelaytip_txt{
+  line-height: 160%;
+  margin-top: 10px;
+}
+
+.quotedelaytip_title{
+  font-weight: bold;
+  color: #FF4C19;
+}
+
+.quotedelaytip_btn{
+  margin-top: 15px;
+  text-align: center;
+}
+
+.quotedelaytip_btn a{
+  display: inline-block;
+  text-decoration: none;
+}
+
+a.quotedelaytip_btn_w{
+  color: #333;
+  padding: 3px 10px;
+  border: 1px solid #999;
+}
+
+a.quotedelaytip_btn_r {
+  padding: 4px 10px;
+  width: 100px;
+  background-color: #FF4C19;
+  border: 0;
+  color: #fff;
+}
+
+a.quotedelaytip_btn_r2 {
+  padding: 4px 10px;
+  width: 150px;
+  background-color: #FF4C19;
+  border: 0;
+  color: #fff;
+}
+
+.quotedelaytip_never{
+  position: absolute;
+  right: 50px;
+  top: 12px;
+}
+
+.quotedelaytip_never input{
+  vertical-align: -2px;
+  margin-right: 3px;
+}
+
+.quotedelaytip_mobile #quotedelaytip_body{
+  border-radius: 8px;
+}
+
+.quotedelaytip_mobile .quotedelaytip_title{
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+}
+.quotedelaytip_mobile .quotedelaytip_never{
+  left: 10px;
+}
+.quotedelaytip_mobile .quotedelaytip_btn a{
+  border-radius: 5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.quotedelaytip_mobile .quotedelaytip_btn_w{
+  border: 0;
+  background-color: #F8F8FA;
+  margin-right: 5px;
+}
+
+.quotedelaytip_mobile .quotedelaytip_close{
+  right: 50%;
+  top: 100%;
+  margin: 10px -11px 11px 0;
+  width: 22px;
+  height: 22px;
+  /* background-image: url(); */
+  /* background-size: 22px 22px; */
+  color: transparent;
+  
+}
+.quotedelaytip_mobile .quotedelaytip_never{
+  color: #A1A1A1;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxXQUFXO0VBQ1gsWUFBWTtFQUNaLGVBQWU7RUFDZixPQUFPO0VBQ1AsTUFBTTtFQUNOLGNBQWM7RUFDZCxvQ0FBb0M7QUFDdEM7O0FBRUE7RUFDRSxzQkFBc0I7RUFDdEIsYUFBYTtFQUNiLGVBQWU7RUFDZixlQUFlO0VBQ2YsU0FBUztFQUNULFFBQVE7RUFDUixlQUFlO0VBQ2YsWUFBWTtFQUNaLG1CQUFtQjtFQUNuQixrQkFBa0I7RUFDbEIsc0JBQXNCO0VBQ3RCLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixXQUFXO0VBQ1gsU0FBUztFQUNULGVBQWU7RUFDZixXQUFXO0VBQ1gsWUFBWTtFQUNaLGtCQUFrQjtFQUNsQixpQkFBaUI7RUFDakIsa0JBQWtCOztFQUVsQiw0QkFBNEI7QUFDOUI7QUFDQTtFQUNFLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLGlCQUFpQjtFQUNqQixnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsY0FBYztBQUNoQjs7QUFFQTtFQUNFLGdCQUFnQjtFQUNoQixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxxQkFBcUI7RUFDckIscUJBQXFCO0FBQ3ZCOztBQUVBO0VBQ0UsV0FBVztFQUNYLGlCQUFpQjtFQUNqQixzQkFBc0I7QUFDeEI7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsWUFBWTtFQUNaLHlCQUF5QjtFQUN6QixTQUFTO0VBQ1QsV0FBVztBQUNiOztBQUVBO0VBQ0UsaUJBQWlCO0VBQ2pCLFlBQVk7RUFDWix5QkFBeUI7RUFDekIsU0FBUztFQUNULFdBQVc7QUFDYjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixXQUFXO0VBQ1gsU0FBUztBQUNYOztBQUVBO0VBQ0Usb0JBQW9CO0VBQ3BCLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixpQkFBaUI7RUFDakIsV0FBVztBQUNiO0FBQ0E7RUFDRSxVQUFVO0FBQ1o7QUFDQTtFQUNFLGtCQUFrQjtFQUNsQixnQkFBZ0I7RUFDaEIsbUJBQW1CO0FBQ3JCO0FBQ0E7RUFDRSxTQUFTO0VBQ1QseUJBQXlCO0VBQ3pCLGlCQUFpQjtBQUNuQjs7QUFFQTtFQUNFLFVBQVU7RUFDVixTQUFTO0VBQ1QseUJBQXlCO0VBQ3pCLFdBQVc7RUFDWCxZQUFZO0VBQ1osNkJBQTZCO0VBQzdCLGdDQUFnQztFQUNoQyxrQkFBa0I7O0FBRXBCO0FBQ0E7RUFDRSxjQUFjO0FBQ2hCIiwic291cmNlc0NvbnRlbnQiOlsiI3F1b3RlZGVsYXl0aXBfbWFza3tcclxuICB3aWR0aDogMTAwJTtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbiAgcG9zaXRpb246IGZpeGVkO1xyXG4gIGxlZnQ6IDA7XHJcbiAgdG9wOiAwO1xyXG4gIHotaW5kZXg6IDk5OTk5O1xyXG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMCwgMCwgMCwgMC41KTtcclxufVxyXG5cclxuI3F1b3RlZGVsYXl0aXBfYm9keXtcclxuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xyXG4gIHBhZGRpbmc6IDE1cHg7XHJcbiAgZm9udC1zaXplOiAxMnB4O1xyXG4gIHBvc2l0aW9uOiBmaXhlZDtcclxuICBsZWZ0OiA1MCU7XHJcbiAgdG9wOiA1MCU7XHJcbiAgei1pbmRleDogMTAwMDAwO1xyXG4gIHdpZHRoOiAzMDBweDtcclxuICBtYXJnaW4tbGVmdDogLTE1MHB4O1xyXG4gIG1hcmdpbi10b3A6IC0xMDBweDtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xyXG4gIGJvcmRlcjogMXB4IHNvbGlkICM5OTk7XHJcbn1cclxuXHJcbi5xdW90ZWRlbGF5dGlwX2Nsb3Nle1xyXG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICByaWdodDogMTBweDtcclxuICB0b3A6IDEwcHg7XHJcbiAgY3Vyc29yOiBwb2ludGVyO1xyXG4gIHdpZHRoOiAyMHB4O1xyXG4gIGhlaWdodDogMjBweDtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgbGluZS1oZWlnaHQ6IDIwcHg7XHJcbiAgZm9udC1mYW1pbHk6IEFyaWFsO1xyXG4gIFxyXG4gIC8qIGJvcmRlcjogMXB4IHNvbGlkIGdyYXk7ICovXHJcbn1cclxuLnF1b3RlZGVsYXl0aXBfY2xvc2U6aG92ZXJ7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2RkZDtcclxufVxyXG5cclxuLnF1b3RlZGVsYXl0aXBfdHh0e1xyXG4gIGxpbmUtaGVpZ2h0OiAxNjAlO1xyXG4gIG1hcmdpbi10b3A6IDEwcHg7XHJcbn1cclxuXHJcbi5xdW90ZWRlbGF5dGlwX3RpdGxle1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gIGNvbG9yOiAjRkY0QzE5O1xyXG59XHJcblxyXG4ucXVvdGVkZWxheXRpcF9idG57XHJcbiAgbWFyZ2luLXRvcDogMTVweDtcclxuICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbi5xdW90ZWRlbGF5dGlwX2J0biBhe1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XHJcbn1cclxuXHJcbmEucXVvdGVkZWxheXRpcF9idG5fd3tcclxuICBjb2xvcjogIzMzMztcclxuICBwYWRkaW5nOiAzcHggMTBweDtcclxuICBib3JkZXI6IDFweCBzb2xpZCAjOTk5O1xyXG59XHJcblxyXG5hLnF1b3RlZGVsYXl0aXBfYnRuX3Ige1xyXG4gIHBhZGRpbmc6IDRweCAxMHB4O1xyXG4gIHdpZHRoOiAxMDBweDtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjRkY0QzE5O1xyXG4gIGJvcmRlcjogMDtcclxuICBjb2xvcjogI2ZmZjtcclxufVxyXG5cclxuYS5xdW90ZWRlbGF5dGlwX2J0bl9yMiB7XHJcbiAgcGFkZGluZzogNHB4IDEwcHg7XHJcbiAgd2lkdGg6IDE1MHB4O1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNGRjRDMTk7XHJcbiAgYm9yZGVyOiAwO1xyXG4gIGNvbG9yOiAjZmZmO1xyXG59XHJcblxyXG4ucXVvdGVkZWxheXRpcF9uZXZlcntcclxuICBwb3NpdGlvbjogYWJzb2x1dGU7XHJcbiAgcmlnaHQ6IDUwcHg7XHJcbiAgdG9wOiAxMnB4O1xyXG59XHJcblxyXG4ucXVvdGVkZWxheXRpcF9uZXZlciBpbnB1dHtcclxuICB2ZXJ0aWNhbC1hbGlnbjogLTJweDtcclxuICBtYXJnaW4tcmlnaHQ6IDNweDtcclxufVxyXG5cclxuLnF1b3RlZGVsYXl0aXBfbW9iaWxlICNxdW90ZWRlbGF5dGlwX2JvZHl7XHJcbiAgYm9yZGVyLXJhZGl1czogOHB4O1xyXG59XHJcblxyXG4ucXVvdGVkZWxheXRpcF9tb2JpbGUgLnF1b3RlZGVsYXl0aXBfdGl0bGV7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gIGNvbG9yOiAjMDAwO1xyXG59XHJcbi5xdW90ZWRlbGF5dGlwX21vYmlsZSAucXVvdGVkZWxheXRpcF9uZXZlcntcclxuICBsZWZ0OiAxMHB4O1xyXG59XHJcbi5xdW90ZWRlbGF5dGlwX21vYmlsZSAucXVvdGVkZWxheXRpcF9idG4gYXtcclxuICBib3JkZXItcmFkaXVzOiA1cHg7XHJcbiAgcGFkZGluZy10b3A6IDZweDtcclxuICBwYWRkaW5nLWJvdHRvbTogNnB4O1xyXG59XHJcbi5xdW90ZWRlbGF5dGlwX21vYmlsZSAucXVvdGVkZWxheXRpcF9idG5fd3tcclxuICBib3JkZXI6IDA7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI0Y4RjhGQTtcclxuICBtYXJnaW4tcmlnaHQ6IDVweDtcclxufVxyXG5cclxuLnF1b3RlZGVsYXl0aXBfbW9iaWxlIC5xdW90ZWRlbGF5dGlwX2Nsb3Nle1xyXG4gIHJpZ2h0OiA1MCU7XHJcbiAgdG9wOiAxMDAlO1xyXG4gIG1hcmdpbjogMTBweCAtMTFweCAxMXB4IDA7XHJcbiAgd2lkdGg6IDIycHg7XHJcbiAgaGVpZ2h0OiAyMnB4O1xyXG4gIC8qIGJhY2tncm91bmQtaW1hZ2U6IHVybCgpOyAqL1xyXG4gIC8qIGJhY2tncm91bmQtc2l6ZTogMjJweCAyMnB4OyAqL1xyXG4gIGNvbG9yOiB0cmFuc3BhcmVudDtcclxuICBcclxufVxyXG4ucXVvdGVkZWxheXRpcF9tb2JpbGUgLnF1b3RlZGVsYXl0aXBfbmV2ZXJ7XHJcbiAgY29sb3I6ICNBMUExQTE7XHJcbn0iXSwic291cmNlUm9vdCI6IiJ9 */</style></head><body><div class="main"><div id="qq_top_tg"></div><div class="toplinks blink"><ul><li><a href="http://finance.eastmoney.com/">财经</a></li><li><a href="http://finance.eastmoney.com/yaowen.html">焦点</a></li><li><a href="http://stock.eastmoney.com/">股票</a></li><li><span class="red"><a href="http://stock.eastmoney.com/newstock.html">新股</a></span></li><li><a href="http://stock.eastmoney.com/gzqh.html">期指</a></li><li><a href="http://option.eastmoney.com/">期权</a></li><li><span class="red"><a href="http://quote.eastmoney.com/flash/sz300059.html">行情</a></span></li><li><a href="http://data.eastmoney.com/">数据</a></li><li><a href="http://stock.eastmoney.com/global.html">全球</a></li><li><a href="http://stock.eastmoney.com/america.html">美股</a></li><li><a href="http://hk.eastmoney.com/">港股</a></li><li><a href="http://futures.eastmoney.com/">期货</a></li><li><a href="http://forex.eastmoney.com/">外汇</a></li><li><a href="http://bank.eastmoney.com/">银行</a></li><li><a href="http://www.1234567.com.cn/">基金</a></li><li><a href="http://money.eastmoney.com/">理财</a></li><li><a href="http://bond.eastmoney.com/">债券</a></li><li><a href=" https://roadshow.eastmoney.com/">直播</a></li><li><span class="red"><a href="http://guba.eastmoney.com/">股吧</a></span></li><li><a href="http://guba.eastmoney.com/jj.html">基金吧</a></li><li><a href="http://blog.eastmoney.com/">博客</a></li><li><span class="red"><a href="http://caifuhao.eastmoney.com/">财富号</a></span></li><li><a href="http://so.eastmoney.com/">搜索</a></li></ul></div><div class="toptitle scf"><div class="logo"><a href="http://www.eastmoney.com"><img src="./static/images/logo.png" class="logoimg" title="东方财富网"></a><a href="./"><span class="title">行情中心</span></a></div><div class="tglinks"><ul><li><a href="//kuaixun.eastmoney.com/"><span class="icon_globe"></span>全球财经快讯</a></li><li><a href="//data.eastmoney.com/"><span class="icon_chart"></span>数据中心</a></li><li><a href="//wap.eastmoney.com/"><span class="icon_mobile"></span>手机站</a></li><li><a href="//acttg.eastmoney.com/pub/pctg_hskh_act_gfcgrj_01_01_01_0"><span class="icon_mobile2"></span>客户端</a></li><li><a href="https://choice.eastmoney.com?adid=web_choice_hqpd_website_01_01_01_0"><span class="icon_choice"></span>Choice数据</a></li><li><a href="https://ai.eastmoney.com/miaoxiang/?adid=web_mx_hqzx_website_01_01_01_0"><span class="icon_mx"></span>妙想大模型</a></li><li><a href="//fundact.eastmoney.com/app/?spm=100003.mjj"><span class="icon_download"></span>手机买基金 国内外市场轻松投</a></li></ul></div></div><div class="topsearch scf"><ul class="topsearch_l blink"><li><a title="行情数据" target="_blank" href="./">行情数据</a></li><li><a target="_blank" href="https://jywg.18.cn/Trade/Buy"><span class="icon_zq"></span>证券交易</a></li><li><a target="_blank" href="http://www.1234567.com.cn/"><span class="icon_jj"></span>基金理财</a></li><li><a target="_blank" href="http://group.eastmoney.com/"><span class="icon_zh"></span>投资组合</a></li><li><a target="_blank" href="http://guba.eastmoney.com/"><span class="icon_gb"></span>股吧互动</a></li></ul><div class="topsearch_s"><form id="suggest_wrapper" style="position: relative;"><div class="suggest2017hotnewt" style="position: absolute; left: 246px; top: 4px;">0</div><input type="text" name="search-suggest" class="topnav2seinp noieclear" id="search_box" autocomplete="off" placeholder="输入股票代码、名称、简拼或关键字"><input type="submit" id="search_btn" class="topnav2sebtn" value="搜索"><div class="suggest2017" style="width: 310px; z-index: 1000; left: 0px; top: 27px;"> <div class="suggest2017c"></div></div></form></div></div><div class="topquote"><div class="topquote_i topquote_i_b"><div class="topquote_l"><a href="https://quote.eastmoney.com/"><span class="icon_quote"></span>行情中心</a></div><div class="topquote_r"><div class="topquote_tglinks"><ul><li><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_01_0">指数</a><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_02_0">期指</a><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_03_0">期权</a><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_04_0">个股</a><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_05_0">板块</a><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_06_0">行业</a><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_07_0">概念</a><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_08_0">排行</a><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_09_0">新股</a><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_10_0">北交所</a><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_11_0">创业板</a><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_12_0">科创板</a><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_14_0">基金</a><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_13_0">港股</a><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_15_0">沪深港</a><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_16_0">美股</a><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_17_0">期货</a><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_18_0">黄金</a><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_19_0">外汇</a><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_20_0">自选股</a><a href="https://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_02_01_21_0">自选基金</a><a href="https://xuangu.eastmoney.com/">条件选股</a><span class="red"><a href="https://quote.eastmoney.com/stockhotmap/">大盘星图</a></span></li></ul></div></div></div><div class="topquote_i"><div class="topquote_l blink"><a href="qqzs.html"><span class="icon_globe2"></span>全球股市</a></div><div class="topquote_r"><div class="globalstocks" id="globalstocks"></div><div class="topquote_rtg"><a target="_blank" href="http://acttg.eastmoney.com/pub/web_pc_dcsy_qqgs_01_01_01_1" class="cft-dl redlink"><span class="icon_em"></span>东方财富官方炒股软件</a><a target="_blank" href="http://acttg.eastmoney.com/pub/web_pc_dcsy_qqgs_01_01_02_1" class="qdhq-dl redlink"><span class="icon_flash"></span>快速行情</a></div></div></div><div class="topquote_i"><div class="topquote_l blink"><a href="http://data.eastmoney.com/"><span class="icon_chart2"></span>数据中心</a></div><div class="topquote_r"><div class="topquote_tglinks2"><ul><li><a href="https://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_03_01_01_0">资金流向</a><a href="https://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_03_01_02_0">主力排名</a><a href="https://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_03_01_03_0">板块资金</a><a href="https://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_03_01_04_0">个股研报</a><span class="red"><a href="https://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_03_01_05_0">新股申购</a></span><a href="https://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_03_01_06_0">转债申购</a><span class="red"><a href="https://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_03_01_07_0">北交所申购</a></span><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_03_01_08_0">AH股比价</a><a href="https://data.eastmoney.com/bbsj/202412/yjbb.html">年报大全</a><a href="https://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_03_01_10_0">融资融券</a><a href="https://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_03_01_11_0">龙虎榜</a><a href="https://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_03_01_12_0">限售解禁</a><a href="https://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_03_01_13_0">IPO审核</a><a href="https://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_03_01_14_0">大宗交易</a><span class="red"><a href="https://acttg.eastmoney.com/pub/web_dfcfsy_wzl_dhl_03_01_15_0">估值分析</a></span></li></ul></div></div></div><div class="topquote_i"><div class="topquote_l blink"><a href="hsgt.html"><span class="icon_change"></span>沪深港通</a></div><div class="topquote_r"><div class="tq_hsgt" id="tq_hsgt"><div class="quote_hsgt"><table><tbody><tr><td><a href="./gridlist.html#sh_hk_board" class="sg">沪股通(港&gt;沪)</a><b class="off"></b>收盘 当日额度充足</td><td><a href="./gridlist.html#sz_hk_board" class="sg">深股通(港&gt;深)</a><b class="off"></b>收盘 当日额度充足</td><td><a href="./gridlist.html#hk_sh_stocks" class="sg">港股通(沪&gt;港)</a><b class="off"></b>收盘<a href="//data.eastmoney.com/hsgt/index.html" class="zjlink">净买额 <span class="nums price_up">77.16亿</span></a></td><td><a href="./gridlist.html#hk_sz_stocks" class="sg">港股通(深&gt;港)</a><b class="off"></b>收盘<a href="//data.eastmoney.com/hsgt/index.html" class="zjlink">净买额 <span class="nums price_up">72.81亿</span></a></td></tr></tbody></table></div></div></div></div></div><div class="bhistory scf"><div class="bs_l">最近访问：</div><div id="bhistory"></div><div class="bs_toutiao"><div class="t"><a href="//js1.eastmoney.com/tg.aspx?ID=3979"><span class="icon_toutiao"></span>头条</a>：</div><div class="list red"><a href="//js1.eastmoney.com/tg.aspx?ID=3979">伊朗最高领袖哈梅内伊遇袭身亡</a></div></div><div id="zhrool"><div><div class="t"><a href="https://group.eastmoney.com/index.html"><span class="icon_group2"></span>投资组合</a>：</div><div class="bs_group"><div class="vscroll"><ul style="height: 16px;"><li><a href="http://group.eastmoney.com/index.html" target="_blank">高手日收益达<span>23.68%</span></a></li><li><a href="http://group.eastmoney.com/index.html" target="_blank">高手周收益达<span>65.83%</span></a></li><li><a href="http://group.eastmoney.com/index.html" target="_blank">高手月收益达<span>215.72%</span></a></li><li><a href="http://group.eastmoney.com/index.html" target="_blank">高手年收益达<span>1617.9%</span></a></li><li><a href="http://group.eastmoney.com/index.html" target="_blank">高手日收益达<span>23.68%</span></a></li><li><a href="http://group.eastmoney.com/index.html" target="_blank">高手周收益达<span>65.83%</span></a></li><li><a href="http://group.eastmoney.com/index.html" target="_blank">高手月收益达<span>215.72%</span></a></li><li><a href="http://group.eastmoney.com/index.html" target="_blank">高手年收益达<span>1617.9%</span></a></li></ul></div></div></div></div></div><div class="mainlc scf" id="mainpage"><div id="leftnav"><div class="leftnav"><div class="title"><img src="./static/images/title.png" alt="行情中心"></div><ul class="l1"><li class=""><a href="/center/"><span class="leftnav_icon icon_index"></span>首页</a></li><li class=""><a href="https://xuangu.eastmoney.com/"><span class="leftnav_icon icon_hot"></span>条件选股</a></li><li class=""><a href="https://quote.eastmoney.com/stockhotmap/"><span class="leftnav_icon icon_hot"></span>大盘星图</a></li><li class=""><a href="//quote.eastmoney.com/zixuan/?from=quotecenter"><span class="leftnav_icon icon_zxg"></span>自选股</a></li><li class=""><a href="//quote.eastmoney.com/zhuti/?from=center"><span class="leftnav_icon icon_zxg2"></span>特色行情</a><span class="hastree icon_rarrow"></span><ul class="lsub"><li class=""><a href="//quote.eastmoney.com/changes/?from=center">盘口异动</a></li><li class=""><a href="//quote.eastmoney.com/zhuti/?from=center">主题投资</a></li><li class=""><a href="//quote.eastmoney.com/ztb/?from=center">涨停板行情</a></li><li class=""><a href="/center/qqzq.html">全球债券</a></li></ul></li><li class=""><a href="/center/gridlist.html#hs_a_board"><span class="leftnav_icon icon_hs"></span>沪深京个股</a><span class="hastree icon_rarrow"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#hs_a_board">沪深京A股</a></li><li class=""><a href="/center/gridlist.html#sh_a_board">上证A股</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#sh_a_board">全部上证A股</a></li><li class=""><a href="/center/gridlist.html#sh_a_board_zcz">注册制上证A股</a></li><li class=""><a href="/center/gridlist.html#sh_a_board_hzz">核准制上证A股</a></li></ul></li><li class=""><a href="/center/gridlist.html#sz_a_board">深证A股</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#sz_a_board">全部深证A股</a></li><li class=""><a href="/center/gridlist.html#sz_a_board_zcz">注册制深证A股</a></li><li class=""><a href="/center/gridlist.html#sz_a_board_hzz">核准制深证A股</a></li></ul></li><li class=""><a href="/center/gridlist.html#bj_a_board">北证A股</a></li><li class=""><a href="/center/gridlist.html#newshares">新股</a></li><li class=""><a href="/center/gridlist.html#gem_board">创业板</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#gem_board">全部创业板</a></li><li class=""><a href="/center/gridlist.html#gem_board_zcz">注册制创业板</a></li><li class=""><a href="/center/gridlist.html#gem_board_hzz">核准制创业板</a></li></ul></li><li class=""><a href="/center/gridlist.html#kcb_board">科创板</a></li><li class=""><a href="/center/gridlist.html#sh_hk_board">沪股通(港&gt;沪)</a></li><li class=""><a href="/center/gridlist.html#sz_hk_board">深股通(港&gt;深)</a></li><li class=""><a href="/center/gridlist.html#b_board">B股</a></li><li class=""><a href="/center/gridlist.html#ab_comparison">AB股比价</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#ab_comparison">全部AB股比价</a></li><li class=""><a href="/center/gridlist.html#ab_comparison_sh">上证AB股比价</a></li><li class=""><a href="/center/gridlist.html#ab_comparison_sz">深证AB股比价</a></li></ul></li><li class=""><a href="/center/gridlist.html#st_board">风险警示板</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#st_board">全部风险</a></li><li class=""><a href="/center/gridlist.html#st_board_sh">上证风险</a></li><li class=""><a href="/center/gridlist.html#st_board_sz">深证风险</a></li><li class=""><a href="/center/gridlist.html#st_board_kcb">科创板风险</a></li><li class=""><a href="/center/gridlist.html#st_board_cyb">创业板风险</a></li></ul></li><li class=""><a href="/center/gridlist.html#staq_net_board">两网及退市</a></li></ul></li><li class="active"><a href="/center/hsbk.html"><span class="leftnav_icon icon_bk on"></span>沪深京板块</a><span class="hastree icon_rarrow"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#concept_board">概念板块</a><span class="icon_rarrow2 hastree2"></span></li><li class=""><a href="/center/gridlist.html#region_board">地域板块</a><span class="icon_rarrow2 hastree2"></span></li><li class="active"><a href="/center/gridlist.html#industry_board">行业板块</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#industry_board_1">东财一级行业</a><span class="icon_rarrow2 hastree2"></span></li><li class=""><a href="/center/gridlist.html#industry_board_2">东财二级行业</a><span class="icon_rarrow2 hastree2"></span></li><li class=""><a href="/center/gridlist.html#industry_board_3">东财三级行业</a><span class="icon_rarrow2 hastree2"></span></li></ul></li></ul></li><li class=""><a href="/center/hszs.html"><span class="leftnav_icon icon_zs"></span>沪深京指数</a><span class="hastree icon_rarrow"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#index_sh">上证系列指数</a></li><li class=""><a href="/center/gridlist.html#index_sz">深证系列指数</a></li><li class=""><a href="/center/gridlist.html#index_components">指数成份</a></li><li class=""><a href="/center/gridlist.html#index_zzzs">中证系列指数</a></li></ul></li><li class=""><a href="/center/gridlist.html#neeq_stocks"><span class="leftnav_icon icon_xsb"></span>新三板</a><span class="hastree icon_rarrow"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#neeq_stocks">全部</a></li><li class=""><a href="/center/gridlist.html#neeq_innovate">创新层</a></li><li class=""><a href="/center/gridlist.html#neeq_basic">基础层</a></li><li class=""><a href="/center/gridlist.html#neeq_marketmaking">集合竞价</a></li><li class=""><a href="/center/gridlist.html#neeq_bidding">做市交易</a></li></ul></li><li class=""><a href="/center/hsgt.html"><span class="leftnav_icon icon_hsgt"></span>沪深港通</a><span class="hastree icon_rarrow"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#sh_hk_board">沪股通(港&gt;沪)</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#sh_hk_board">股票</a></li><li class=""><a href="/center/gridlist.html#sh_hk_board_fund">ETF场内基金</a></li></ul></li><li class=""><a href="/center/gridlist.html#sz_hk_board">深股通(港&gt;深)</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#sz_hk_board">股票</a></li><li class=""><a href="/center/gridlist.html#sz_hk_board_fund">ETF场内基金</a></li></ul></li><li class=""><a href="/center/gridlist.html#hk_sh_stocks">港股通(沪&gt;港)</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#hk_sh_stocks">股票</a></li><li class=""><a href="/center/gridlist.html#hk_sh_board_fund">ETF场内基金</a></li></ul></li><li class=""><a href="/center/gridlist.html#hk_sz_stocks">港股通(深&gt;港)</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#hk_sz_stocks">股票</a></li><li class=""><a href="/center/gridlist.html#hk_sz_board_fund">ETF场内基金</a></li></ul></li><li class=""><a href="/center/gridlist.html#ah_comparison">AH股比价</a></li></ul></li><li class=""><a href="/center/ggsc.html"><span class="leftnav_icon icon_hk"></span>港股市场</a><span class="hastree icon_rarrow"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#hk_stocks">全部港股</a></li><li class=""><a href="/center/gridlist.html#hk_mainboard">港股主板</a></li><li class=""><a href="/center/gridlist.html#hk_gem">港股创业板</a></li><li class=""><a href="/center/gridlist.html#hk_wellknown">知名港股</a></li><li class=""><a href="/center/gridlist.html#hk_bluechips">蓝筹股</a></li><li class=""><a href="/center/gridlist.html#hk_redchips">红筹股</a></li><li class=""><a href="/center/gridlist.html#hk_redchips_components">红筹成分股</a></li><li class=""><a href="/center/gridlist.html#hk_stateowned">国企股</a></li><li class=""><a href="/center/gridlist.html#hk_stateowned_components">国企成分股</a></li><li class=""><a href="/center/gridlist.html#hk_components">港股通成份股</a></li><li class=""><a href="/center/gridlist.html#ggt_etf_board">港股通ETF基金</a></li><li class=""><a href="/center/gridlist.html#hk_rmb">人民币交易港股</a></li><li class=""><a href="/center/gridlist.html#hsi_large_components">恒生综合大型成份股</a></li><li class=""><a href="/center/gridlist.html#hsi_medium_components">恒生综合中型成份股</a></li><li class=""><a href="/center/gridlist.html#hkah_comparison">AH股比价</a></li><li class=""><a href="/center/gridlist.html#hk_adr">ADR</a></li><li class=""><a href="/center/gridlist.html#hk_index">香港指数</a></li><li class=""><a href="/center/gridlist.html#hk_warrants">港股窝轮</a></li><li class=""><a href="/center/gridlist.html#hk_CBBCs">港股牛熊证</a></li></ul></li><li class=""><a href="/center/mgsc.html"><span class="leftnav_icon icon_us"></span>美股市场</a><span class="hastree icon_rarrow"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#us_stocks">全部美股</a></li><li class=""><a href="/center/gridlist.html#us_wellknown">知名美股</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#us_technology">科技类</a></li><li class=""><a href="/center/gridlist.html#us_financial">金融类</a></li><li class=""><a href="/center/gridlist.html#us_medicine_food">医药食品类</a></li><li class=""><a href="/center/gridlist.html#us_media">媒体类</a></li><li class=""><a href="/center/gridlist.html#us_automotive_energy">汽车能源类</a></li><li class=""><a href="/center/gridlist.html#us_manufacture_retail">制造零售类</a></li></ul></li><li class=""><a href="/center/gridlist.html#us_chinese">中国概念股</a></li><li class=""><a href="/center/gridlist.html#us_index">美股指数</a></li><li class=""><a href="/center/gridlist.html#us_pinksheet">粉单市场</a></li></ul></li><li class=""><a href="/center/yg.html"><span class="leftnav_icon icon_uk"></span>英股市场</a><span class="hastree icon_rarrow"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#stocks_all">全部英股</a></li><li class=""><a href="/center/gridlist.html#stocks_mt_156_7">GDR</a></li><li class=""><a href="/center/gridlist.html#stocks_b_MK0794">知名英股</a></li><li class=""><a href="/center/gridlist.html#stocks_mt_155_3">英国ETF</a></li><li class=""><a href="/center/gridlist.html#stocks_mt_341">英国指数</a></li></ul></li><li class=""><a href="/center/gridlist.html#stocks_mt_252_1"><span class="leftnav_icon icon_ch"></span>瑞士市场</a><span class="hastree icon_rarrow"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#stocks_mt_252_1">GDR</a></li></ul></li><li class=""><a href="/center/qqzs.html"><span class="leftnav_icon icon_global_index"></span>全球指数</a><span class="hastree icon_rarrow"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#global_asia">亚洲股市</a></li><li class=""><a href="/center/gridlist.html#global_euro">欧洲股市</a></li><li class=""><a href="/center/gridlist.html#global_america">美洲股市</a></li><li class=""><a href="/center/gridlist.html#global_australia">澳洲股市</a></li><li class=""><a href="/center/gridlist.html#global_qtzs">其他指数</a></li></ul></li><li class=""><a href="/center/futures.html"><span class="leftnav_icon icon_qihuo"></span>期货市场</a><span class="hastree icon_rarrow"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#futures_113">上期所</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#futures_113_1">沪铜</a></li><li class=""><a href="/center/gridlist.html#futures_113_2">铝</a></li><li class=""><a href="/center/gridlist.html#futures_113_3">锌</a></li><li class=""><a href="/center/gridlist.html#futures_113_4">铅</a></li><li class=""><a href="/center/gridlist.html#futures_113_5">沪金</a></li><li class=""><a href="/center/gridlist.html#futures_113_6">沪银</a></li><li class=""><a href="/center/gridlist.html#futures_113_7">螺纹钢</a></li><li class=""><a href="/center/gridlist.html#futures_113_8">线材</a></li><li class=""><a href="/center/gridlist.html#futures_113_9">燃料油</a></li><li class=""><a href="/center/gridlist.html#futures_113_10">天然橡胶</a></li><li class=""><a href="/center/gridlist.html#futures_113_11">沥青</a></li><li class=""><a href="/center/gridlist.html#futures_113_12">热卷</a></li><li class=""><a href="/center/gridlist.html#futures_113_13">镍</a></li><li class=""><a href="/center/gridlist.html#futures_113_14">锡</a></li><li class=""><a href="/center/gridlist.html#futures_113_15">纸浆</a></li><li class=""><a href="/center/gridlist.html#futures_113_16">不锈钢</a></li><li class=""><a href="/center/gridlist.html#futures_113_17">氧化铝</a></li><li class=""><a href="/center/gridlist.html#futures_113_18">丁二烯胶</a></li><li class=""><a href="/center/gridlist.html#futures_113_19">铸造铝</a></li><li class=""><a href="/center/gridlist.html#futures_113_20">胶版纸</a></li></ul></li><li class=""><a href="/center/gridlist.html#futures_142">上期能源</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#futures_142_1">原油</a></li><li class=""><a href="/center/gridlist.html#futures_142_2">20号胶</a></li><li class=""><a href="/center/gridlist.html#futures_142_3">低硫燃油</a></li><li class=""><a href="/center/gridlist.html#futures_142_4">国际铜</a></li><li class=""><a href="/center/gridlist.html#futures_142_5">欧线集运</a></li></ul></li><li class=""><a href="/center/gridlist.html#futures_114">大商所</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#futures_114_1">玉米</a></li><li class=""><a href="/center/gridlist.html#futures_114_2">豆一</a></li><li class=""><a href="/center/gridlist.html#futures_114_3">豆二</a></li><li class=""><a href="/center/gridlist.html#futures_114_4">豆粕</a></li><li class=""><a href="/center/gridlist.html#futures_114_5">豆油</a></li><li class=""><a href="/center/gridlist.html#futures_114_6">棕榈油</a></li><li class=""><a href="/center/gridlist.html#futures_114_7">塑料</a></li><li class=""><a href="/center/gridlist.html#futures_114_8">PVC</a></li><li class=""><a href="/center/gridlist.html#futures_114_9">焦炭</a></li><li class=""><a href="/center/gridlist.html#futures_114_10">焦煤</a></li><li class=""><a href="/center/gridlist.html#futures_114_11">纤维板</a></li><li class=""><a href="/center/gridlist.html#futures_114_12">胶合板</a></li><li class=""><a href="/center/gridlist.html#futures_114_13">铁矿石</a></li><li class=""><a href="/center/gridlist.html#futures_114_14">鸡蛋</a></li><li class=""><a href="/center/gridlist.html#futures_114_15">聚丙烯</a></li><li class=""><a href="/center/gridlist.html#futures_114_16">淀粉</a></li><li class=""><a href="/center/gridlist.html#futures_114_17">乙二醇</a></li><li class=""><a href="/center/gridlist.html#futures_114_18">梗米</a></li><li class=""><a href="/center/gridlist.html#futures_114_19">苯乙烯</a></li><li class=""><a href="/center/gridlist.html#futures_114_20">LPG</a></li><li class=""><a href="/center/gridlist.html#futures_114_21">生猪</a></li><li class=""><a href="/center/gridlist.html#futures_114_22">原木</a></li><li class=""><a href="/center/gridlist.html#futures_114_23">塑料月均</a></li><li class=""><a href="/center/gridlist.html#futures_114_24">PVC月均</a></li><li class=""><a href="/center/gridlist.html#futures_114_25">聚丙烯月均</a></li><li class=""><a href="/center/gridlist.html#futures_114_26">纯苯</a></li></ul></li><li class=""><a href="/center/gridlist.html#futures_115">郑商所</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#futures_115_1">强麦</a></li><li class=""><a href="/center/gridlist.html#futures_115_2">普麦</a></li><li class=""><a href="/center/gridlist.html#futures_115_3">棉花</a></li><li class=""><a href="/center/gridlist.html#futures_115_4">白糖</a></li><li class=""><a href="/center/gridlist.html#futures_115_5">PTA</a></li><li class=""><a href="/center/gridlist.html#futures_115_6">菜油</a></li><li class=""><a href="/center/gridlist.html#futures_115_7">早籼稻</a></li><li class=""><a href="/center/gridlist.html#futures_115_8">甲醇</a></li><li class=""><a href="/center/gridlist.html#futures_115_9">玻璃</a></li><li class=""><a href="/center/gridlist.html#futures_115_10">油菜籽</a></li><li class=""><a href="/center/gridlist.html#futures_115_11">菜粕</a></li><li class=""><a href="/center/gridlist.html#futures_115_13">粳稻</a></li><li class=""><a href="/center/gridlist.html#futures_115_14">晚籼稻</a></li><li class=""><a href="/center/gridlist.html#futures_115_15">硅铁</a></li><li class=""><a href="/center/gridlist.html#futures_115_16">锰硅</a></li><li class=""><a href="/center/gridlist.html#futures_115_17">动力煤</a></li><li class=""><a href="/center/gridlist.html#futures_115_18">棉纱</a></li><li class=""><a href="/center/gridlist.html#futures_115_19">苹果</a></li><li class=""><a href="/center/gridlist.html#futures_115_20">红枣</a></li><li class=""><a href="/center/gridlist.html#futures_115_21">尿素</a></li><li class=""><a href="/center/gridlist.html#futures_115_22">纯碱</a></li><li class=""><a href="/center/gridlist.html#futures_115_23">涤纶短纤</a></li><li class=""><a href="/center/gridlist.html#futures_115_24">花生</a></li><li class=""><a href="/center/gridlist.html#futures_115_25">对二甲苯</a></li><li class=""><a href="/center/gridlist.html#futures_115_26">烧碱</a></li><li class=""><a href="/center/gridlist.html#futures_115_27">瓶片</a></li><li class=""><a href="/center/gridlist.html#futures_115_28">丙烯</a></li></ul></li><li class=""><a href="/center/gridlist.html#futures_225">广期所</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#futures_225_1">工业硅</a></li><li class=""><a href="/center/gridlist.html#futures_225_2">碳酸锂</a></li><li class=""><a href="/center/gridlist.html#futures_225_3">多晶硅</a></li><li class=""><a href="/center/gridlist.html#futures_225_4">铂</a></li><li class=""><a href="/center/gridlist.html#futures_225_5">钯</a></li></ul></li><li class=""><a href="/center/gridlist.html#futures_cffex">中金所</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#futures_220_6">2年期国债</a></li><li class=""><a href="/center/gridlist.html#futures_220_5">5年期国债</a></li><li class=""><a href="/center/gridlist.html#futures_220_4">10年期国债</a></li><li class=""><a href="/center/gridlist.html#futures_220_8">30年期国债</a></li><li class=""><a href="/center/gridlist.html#futures_220_3">上证50指数</a></li><li class=""><a href="/center/gridlist.html#futures_220_2">沪深300指数</a></li><li class=""><a href="/center/gridlist.html#futures_220_1">中证500指数</a></li><li class=""><a href="/center/gridlist.html#futures_220_7">中证1000股指</a></li></ul></li><li class=""><a href="/center/gridlist.html#futures_hkex">港交所</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#hk_index_futures">指数期货</a></li><li class=""><a href="/center/gridlist.html#hk_stock_futures">股票期货</a></li><li class=""><a href="/center/gridlist.html#HCF_CUS">外汇期货</a></li><li class=""><a href="/center/gridlist.html#HMFS_LRP">商品期货</a></li></ul></li><li class=""><a href="/center/gridlist.html#futures_global">国际期货</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#futures_global-cobot">芝加哥CBOT</a></li><li class=""><a href="/center/gridlist.html#futures_global-nymex">纽约NYMEX</a></li><li class=""><a href="/center/gridlist.html#futures_global-comex">纽约COMEX</a></li><li class=""><a href="/center/gridlist.html#futures_global-nybot">纽约NYBOT</a></li><li class=""><a href="/center/gridlist.html#futures_global-lme">伦敦LME</a></li><li class=""><a href="/center/gridlist.html#futures_global-ipe">洲际ICE</a></li><li class=""><a href="/center/gridlist.html#futures_global-sgx">新加坡SGX</a></li><li class=""><a href="/center/gridlist.html#futures_global-mdex">马来西亚BMD</a></li></ul></li><li class=""><a href="/center/gridlist.html#futures_finance">金融期货<span class="icon_hot_nav"></span></a></li><li class=""><a href="/center/gridlist.html#futures_energy">能源化工</a></li><li class=""><a href="/center/gridlist.html#futures_metal">金属钢材</a></li><li class=""><a href="/center/gridlist.html#futures_farmproduce">农产品食品原料</a></li></ul></li><li class=""><a href="/center/jjsc.html"><span class="leftnav_icon icon_fund"></span>基金市场</a><span class="hastree icon_rarrow"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#fund_close_end">封闭基金行情</a></li><li class=""><a href="/center/gridlist.html#fund_etf">ETF基金行情</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#fund_etf">全部ETF</a></li><li class=""><a href="/center/gridlist.html#sh_hk_board_fund">沪股通ETF</a></li><li class=""><a href="/center/gridlist.html#sz_hk_board_fund">深股通ETF</a></li><li class=""><a href="/center/gridlist.html#hk_sh_board_fund">港股通ETF(沪&gt;港)</a></li><li class=""><a href="/center/gridlist.html#hk_sz_board_fund">港股通ETF(深&gt;港)</a></li></ul></li><li class=""><a href="/center/gridlist.html#fund_lof">LOF基金行情</a></li><li class=""><a href="http://fund.eastmoney.com/data/fundranking.html">开放式基金排行</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="http://fund.eastmoney.com/data/fundranking.html">全部</a></li><li class=""><a href="http://fund.eastmoney.com/data/fundranking.html#tgp">股票型</a></li><li class=""><a href="http://fund.eastmoney.com/data/fundranking.html#thh">混合型</a></li><li class=""><a href="http://fund.eastmoney.com/data/fundranking.html#tzq">债券型</a></li><li class=""><a href="https://fund.eastmoney.com/data/diyfundranking.html">ETF</a></li><li class=""><a href="http://fund.eastmoney.com/data/fundranking.html#tqdii">QDII</a></li></ul></li><li class=""><a href="http://fund.eastmoney.com/HBJJ_dwsy.html">货币型基金收益</a></li><li class=""><a href="http://fund.eastmoney.com/fund.html">开放式基金净值</a></li></ul></li><li class=""><a href="/center/gridlist.html#fund_reits_all"><span class="leftnav_icon icon_reits"></span>REITs</a><span class="hastree icon_rarrow"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#fund_reits_all">沪深REITs</a></li><li class=""><a href="/center/gridlist.html#fund_reits_sh">上交所REITs</a></li><li class=""><a href="/center/gridlist.html#fund_reits_sz">深交所REITs</a></li></ul></li><li class=""><a href="/center/zqsc.html"><span class="leftnav_icon icon_bond"></span>债券市场</a><span class="hastree icon_rarrow"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#bond_index">债券指数</a></li><li class=""><a href="/center/gridlist.html#bond_sh">上海债券现券</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#bond_national_sh">沪国债</a></li><li class=""><a href="/center/gridlist.html#bond_enterprise_sh">沪企债</a></li><li class=""><a href="/center/gridlist.html#bond_convertible_sh">沪转债</a></li></ul></li><li class=""><a href="/center/gridlist.html#bond_sz">深圳债券现券</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#bond_national_sz">深国债</a></li><li class=""><a href="/center/gridlist.html#bond_enterprise_sz">深企债</a></li><li class=""><a href="/center/gridlist.html#bond_convertible_sz">深转债</a></li></ul></li><li class=""><a href="/center/gridlist.html#bond_bj">北京债券现券</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#bond_enterprise_bj">北企债</a></li></ul></li><li class=""><a href="/center/fullscreenlist.html#convertible_comparison">可转债比价表</a></li><li class=""><a href="/center/gridlist.html#bond_sh_buyback">上证通用质押式回购</a></li><li class=""><a href="/center/gridlist.html#bond_sz_buyback">深证通用质押式回购</a></li></ul></li><li class=""><a href="/center/whsc.html"><span class="leftnav_icon icon_forex"></span>外汇市场</a><span class="hastree icon_rarrow"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#forex_all">所有汇率</a></li><li class=""><a href="/center/gridlist.html#forex_basic">基本汇率</a></li><li class=""><a href="/center/gridlist.html#forex_cross">交叉汇率</a></li><li class=""><a href="/center/gridlist.html#forex_cny">人民币品种</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#forex_cnyc">人民币汇率中间价</a></li><li class=""><a href="/center/gridlist.html#forex_cnh">离岸人民币外币</a></li></ul></li><li class=""><a href="/center/gridlist.html#forex_exchange_icbc">外汇牌价</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#forex_exchange_icbc">工商银行报价</a></li><li class=""><a href="/center/gridlist.html#forex_exchange_abc">农业银行报价</a></li><li class=""><a href="/center/gridlist.html#forex_exchange_boc">中国银行报价</a></li><li class=""><a href="/center/gridlist.html#forex_exchange_ccb">建设银行报价</a></li><li class=""><a href="/center/gridlist.html#forex_exchange_bcm">交通银行报价</a></li><li class=""><a href="/center/gridlist.html#forex_exchange_cmb">招商银行报价</a></li></ul></li></ul></li><li class=""><a href="/center/qqsc.html"><span class="leftnav_icon icon_options"></span>期权市场</a><span class="hastree icon_rarrow"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#options_sh50etf_all">上交所</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#options_sz50etf_txbj">上证50ETF</a></li><li class=""><a href="/center/gridlist.html#options_sahs300etf_txbj">沪深300ETF</a></li><li class=""><a href="/center/gridlist.html#options_sazz500etf_txbj">中证500ETF</a></li><li class=""><a href="/center/gridlist.html#options_kc50etf_all">科创50ETF</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#options_kc50etf1_txbj">科创50</a></li><li class=""><a href="/center/gridlist.html#options_kc50etf2_txbj">科创板50</a></li></ul></li></ul></li><li class=""><a href="/center/gridlist.html#options_szetf_all">深交所</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#options_sehs300etf_txbj">沪深300ETF</a></li><li class=""><a href="/center/gridlist.html#options_sezz500etf_txbj">中证500ETF</a></li><li class=""><a href="/center/gridlist.html#options_secybetf_txbj">创业板ETF</a></li></ul></li><li class=""><a href="/center/gridlist.html#options_cffex_all">中金所</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#options_zjcffex_txbj">沪深300指数</a></li><li class=""><a href="/center/gridlist.html#options_zjcffex_mo_txbj">中证1000指数</a></li><li class=""><a href="/center/gridlist.html#options_zjcffex_ho_txbj">上证50指数</a></li></ul></li><li class=""><a href="/center/gridlist.html#options_shfe_all">上期所</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#options_151_1">沪铜</a></li><li class=""><a href="/center/gridlist.html#options_151_2">橡胶</a></li><li class=""><a href="/center/gridlist.html#options_151_3">沪金</a></li><li class=""><a href="/center/gridlist.html#options_151_4">沪铝</a></li><li class=""><a href="/center/gridlist.html#options_151_5">沪锌</a></li><li class=""><a href="/center/gridlist.html#options_151_6">螺纹钢</a></li><li class=""><a href="/center/gridlist.html#options_151_7">沪银</a></li><li class=""><a href="/center/gridlist.html#options_151_8">丁二烯胶</a></li><li class=""><a href="/center/gridlist.html#options_151_9">沪铅</a></li><li class=""><a href="/center/gridlist.html#options_151_10">沪镍</a></li><li class=""><a href="/center/gridlist.html#options_151_11">沪锡</a></li><li class=""><a href="/center/gridlist.html#options_151_12">氧化铝</a></li><li class=""><a href="/center/gridlist.html#options_151_13">铸造铝</a></li><li class=""><a href="/center/gridlist.html#options_151_14">胶版纸</a></li><li class=""><a href="/center/gridlist.html#options_151_15">燃油</a></li><li class=""><a href="/center/gridlist.html#options_151_16">沥青</a></li><li class=""><a href="/center/gridlist.html#options_151_17">纸浆</a></li></ul></li><li class=""><a href="/center/gridlist.html#options_dce_all">大商所</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#options_140_1">豆粕</a></li><li class=""><a href="/center/gridlist.html#options_140_2">玉米</a></li><li class=""><a href="/center/gridlist.html#options_140_3">铁矿石</a></li><li class=""><a href="/center/gridlist.html#options_140_4">LPG</a></li><li class=""><a href="/center/gridlist.html#options_140_5">聚丙烯</a></li><li class=""><a href="/center/gridlist.html#options_140_6">PVC</a></li><li class=""><a href="/center/gridlist.html#options_140_7">塑料</a></li><li class=""><a href="/center/gridlist.html#options_140_8">棕榈油</a></li><li class=""><a href="/center/gridlist.html#options_140_9">豆一</a></li><li class=""><a href="/center/gridlist.html#options_140_10">豆二</a></li><li class=""><a href="/center/gridlist.html#options_140_11">豆油</a></li><li class=""><a href="/center/gridlist.html#options_140_12">乙二醇</a></li><li class=""><a href="/center/gridlist.html#options_140_13">苯乙烯</a></li><li class=""><a href="/center/gridlist.html#options_140_14">鸡蛋</a></li><li class=""><a href="/center/gridlist.html#options_140_15">淀粉</a></li><li class=""><a href="/center/gridlist.html#options_140_16">生猪</a></li><li class=""><a href="/center/gridlist.html#options_140_17">原木</a></li><li class=""><a href="/center/gridlist.html#options_140_18">纯苯</a></li><li class=""><a href="/center/gridlist.html#options_140_19">焦煤</a></li></ul></li><li class=""><a href="/center/gridlist.html#options_czce_all">郑商所</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#options_141_1">白糖</a></li><li class=""><a href="/center/gridlist.html#options_141_2">棉花</a></li><li class=""><a href="/center/gridlist.html#options_141_3">甲醇</a></li><li class=""><a href="/center/gridlist.html#options_141_4">PTA</a></li><li class=""><a href="/center/gridlist.html#options_141_5">菜粕</a></li><li class=""><a href="/center/gridlist.html#options_141_6">动力煤</a></li><li class=""><a href="/center/gridlist.html#options_141_7">菜油</a></li><li class=""><a href="/center/gridlist.html#options_141_8">花生</a></li><li class=""><a href="/center/gridlist.html#options_141_9">对二甲苯</a></li><li class=""><a href="/center/gridlist.html#options_141_10">烧碱</a></li><li class=""><a href="/center/gridlist.html#options_141_11">硅铁</a></li><li class=""><a href="/center/gridlist.html#options_141_12">锰硅</a></li><li class=""><a href="/center/gridlist.html#options_141_13">苹果</a></li><li class=""><a href="/center/gridlist.html#options_141_14">尿素</a></li><li class=""><a href="/center/gridlist.html#options_141_15">纯碱</a></li><li class=""><a href="/center/gridlist.html#options_141_16">短纤</a></li><li class=""><a href="/center/gridlist.html#options_141_17">玻璃</a></li><li class=""><a href="/center/gridlist.html#options_141_18">红枣</a></li><li class=""><a href="/center/gridlist.html#options_141_19">瓶片</a></li><li class=""><a href="/center/gridlist.html#options_141_20">丙烯</a></li></ul></li><li class=""><a href="/center/gridlist.html#options_ine_all">上期能源</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#options_163_1">原油</a></li></ul></li><li class=""><a href="/center/gridlist.html#options_gfex_all">广期所</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#options_226_1">工业硅</a></li><li class=""><a href="/center/gridlist.html#options_226_2">碳酸锂</a></li><li class=""><a href="/center/gridlist.html#options_226_3">多晶硅</a></li><li class=""><a href="/center/gridlist.html#options_226_4">铂</a></li><li class=""><a href="/center/gridlist.html#options_226_5">钯</a></li></ul></li><li class=""><a href="/center/gridlist.html#options_uscny_all">香港期交所</a><span class="icon_rarrow2 hastree2"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#options_uscny_all">美元兑人民币</a></li></ul></li></ul></li><li class=""><a href="/center/hjsc.html"><span class="leftnav_icon icon_gold"></span>黄金市场</a><span class="hastree icon_rarrow"></span><ul class="lsub"><li class=""><a href="/center/gridlist.html#gold_sh_spotgoods">上海黄金现货</a></li><li class=""><a href="/center/gridlist.html#gold_sh_futures">上海黄金期货</a></li><li class=""><a href="/center/gridlist.html#nobalmetal_spotgoods">国际贵金属现货</a></li><li class=""><a href="/center/gridlist.html#nobalmetal_futures">国际贵金属期货</a></li></ul></li></ul></div></div><div id="mainc"><div><div class="boards_cont"><div class="cwrl scf"><div class="l"><div class="crumbs"><a href="https://www.eastmoney.com/">东方财富网</a> &gt; <a href="/center/">行情中心</a> &gt;  <a href="/center/hsbk.html">沪深京板块</a> &gt;  行业板块</div></div><div class="r"><a class="refresh_link" href="#">查看最新</a></div></div><div class="hlmzb scf"><div class="hl"><div class="hotlinks"><span class="title">热门</span><span class="links"><a href="//stock.eastmoney.com/hangye.html">行业频道</a>|<a href="//data.eastmoney.com/bkzj/hy.html">行业板块资金流今日排行</a>|<a href="//data.eastmoney.com/bkzj/hy_5.html">行业板块资金流5日排行</a>|<a href="//data.eastmoney.com/bkzj/hy_10.html">行业板块资金流10日排行</a></span></div></div></div></div></div></div></div><div class="statement">郑重声明：本网站所刊载的所有资料及图表仅供参考使用。投资者依据本网站提供的信息、资料及图表进行金融、证券等投资所造成的盈亏与本网站无关。本网站如因系统维护或升级而需暂停服务，或因线路及超出本公司控制范围的硬件故障或其它不可抗力而导致暂停服务，于暂停服务期间造成的一切不便与损失，本网站不负任何责任。</div></div><div class="footer page_footer"><!-- footer-2016 -->
+<style>
+    .footer2016 ul {list-style: none;margin: 0;padding: 0;}
+    .footer2016 a:hover{color:#ff4901 !important;text-decoration: underline !important;}
+    .footer2016 .icon, .footer2016 .navlist li a {display: inline-block;}
+    .footer2016 .icon {background-image: url(//g1.dfcfw.com/g4/202005/20200513165332.png);background-repeat: no-repeat;}
+    .footer2016 {margin: 0 auto;clear: both;width: 1200px;line-height: 1.1;_line-height: 1.2;font-family: simsun;font-size: 12px;border-top: 2px solid #2F5895;}
+    .footer2016 .footertg {background-color: #F3F3F3;float: left;width: 100%;padding: 12px 0 0;height: 140px;}
+    .footer2016 .footertg a:link, .footer2016 .footertg a:visited {color: #676767;text-decoration: none;}
+    .footer2016 .qr {float: left;width: 80px;height: 140px;line-height: 150%;padding: 0 20px 0 8px;}
+    .footer2016 .qr .t {font-weight: 700;font-size: 14px;padding-bottom: 10px;}
+    .footer2016 .icon_qrem80, .footer2016 .icon_qrjj80 {background-image: url(//g1.dfcfw.com/g2/201607/20160728133707.png);width: 80px;height: 80px;}
+    .footer2016 .icon_qrem80 {background-position: 0 -330px;}
+    .footer2016 .icon_emwxqr, .footer2016 .icon_jjwxqr {background-image: url(//g1.dfcfw.com/g2/201607/20160728133707.png);width: 86px;height: 106px;}
+    .footer2016 .icon_emwxqr {background-position: -90px 0;}
+    .footer2016 .ftglist ul li.qrli {position: relative;}
+    .footer2016 .ftglist ul li.qrli:hover .icon_qr, .footer2016 .scl-news .name a {display: block;}
+    .footer2016 .icon_emwxqr, .footer2016 .icon_jjwxqr {display: none;position: absolute;left: 0;top: 24px;}
+    .footer2016 .ftglist {float: left;height: 140px;padding: 0 20px;}
+    .footer2016 .ftglistt {font-size: 14px;font-weight: 700;line-height: 130%;padding-bottom: 6px;text-align: left;}
+    .footer2016 .ftglist ul li {padding: 5px 0;color: #676767;text-align: left;}
+    .footer2016 .icon_wb {background-position: -24px 0;width: 14px;height: 12px;}
+    .footer2016 .icon_wx {background-position: 0 0;width: 14px;height: 11px;}
+    .footer2016 .icon_note {background-position: -47px 0;width: 13px;height: 11px;}
+    .footer2016 .ftglist .icon {vertical-align: -1px;margin-right: 2px;}
+    .footer2016 .footertg a:link, .footer2016 .footertg a:visited {color: #676767;text-decoration: none;}
+    .footer2016 .qrl {border-left: 1px solid #ddd;margin-left: 20px;padding-left: 40px;}
+    .footer2016 .icon_qrjj80 {background-position: -90px -330px;}
+    .footer2016 .footercr {clear: both;text-align: center;line-height: 26px;font-size: 12px;width:1200px;margin: 0 auto;height:26px;overflow:hidden;}
+    .footer2016 .icon_icp {background-position: -24px -21px;width: 15px;height: 17px;}
+    .footer2016 .footercr .icon {vertical-align: -3px;margin-right: 2px;}
+    .footer2016 .icon_pol {background-position: 0 -22px;width: 18px;height: 20px;}
+    .footer2016 .footerlinks {background-color: #2F5895;height: 30px;text-align: center;line-height: 30px;}
+    .footer2016 .footerlinks a:link, .footer2016 .footerlinks a:visited, .footer2016 .footerlinks a:hover {color: #fff !important;text-decoration: none;margin: 0 14px;}
+    .footer2016 .footerbz {text-align: center;padding: 12px 0;}
+    .footer2016 .footerbz a {margin: 0 4px;}
+    .footer2016 .footer-police {background-position: 0 -112px;width: 110px;height: 40px;}
+    .footer2016 .footer-zx110 {background-position: -120px -113px;width: 110px;height: 40px;}
+    .footer2016 .footer-shjubao {background-position: 0 -172px;width: 110px;height: 40px;}
+    .footer2016 .footer-cxzx {background-position: -120px -174px;width: 40px;height: 40px;}
+    .footer2016 .footer-shgs {background-position: -180px -174px;width: 47px;height: 40px;}
+    .footer2016 .footer-12377 {background-position: 0 -54px;width: 186px;height: 40px;}
+    .footer2016 .footer-yhjb {background-position: 0 -229px;width: 123px;height: 40px;}
+    .footer2016 .footer-qrlast {width: 90px;}
+    .footer2016 .footer-icon-qihuoqr { background: url(https://g1.dfcfw.com/g4/202303/20230324150231.png);width: 80px;height: 80px;display: inline-block;background-repeat: no-repeat;vertical-align: -5px;}
+    .footer2016 .footer-lastqihuo { padding-right: 0px;}
+</style>
+
+<div class="footer2016">
+    <div class="footertg">
+        <div class="qr">
+            <div class="t"><a href="http://acttg.eastmoney.com/pub/web_dfcfsy_dbtg_wzl_01_01_01_1" style="color:#000" target="_blank">东方财富</a></div>
+            <a href="http://acttg.eastmoney.com/pub/web_app_dcsy_2wm_01_01_01_0" target="_blank"><em class="icon icon_qrem80"></em></a><br>扫一扫下载APP
+        </div>
+
+        <div class="ftglist">
+            <div class="ftglistt">东方财富产品</div>
+            <ul>
+                <li><a href="https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfwmfb_01_01_01_0" target="_blank">东方财富免费版</a></li>
+                <li><a href="https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfwl2_01_01_01_0" target="_blank">东方财富Level-2</a></li>
+                <li><a href="https://www.dfcfw.com/CLB/" target="_blank">东方财富策略版</a></li>
+                <li><a href="https://acttg.eastmoney.com/pub/web_dfcfsy_wzl_bottom_02_02_04_1" target="_blank">妙想投研助理</a></li>
+                <li><a href="https://choice.eastmoney.com/terminal?adid=web_choice_dcsy_website_02_01_01_0" target="_blank">Choice金融终端</a></li>
+            </ul>
+        </div>
+        <div class="ftglist">
+            <div class="ftglistt">证券交易</div>
+            <ul>
+                <li><a href="https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0" target="_blank">东方财富证券开户</a></li>
+                <li><a href="https://jywg.18.cn/Trade/Buy" target="_blank">东方财富在线交易</a></li>
+				<li><a href="https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0" target="_blank">东方财富证券交易</a></li>
+            </ul>
+        </div>
+        <div class="ftglist">
+            <div class="ftglistt">关注东方财富</div>
+            <ul>
+                <li><a href="http://weibo.com/dfcfw" target="_blank"><em class="icon icon_wb"></em>东方财富网微博</a></li>
+                <li class="qrli"><a href="javascript:;" target="_self"><em class="icon icon_wx"></em>东方财富网微信</a><em class="icon icon_qr icon_emwxqr"></em></li>
+                <li><a href="http://corp.eastmoney.com/Lianxi_liuyan.asp" target="_blank"><em class="icon icon_note"></em>意见与建议</a></li>
+            </ul>
+        </div>
+        <div class="qr qrl">
+            <div class="t"><a href="http://acttg.eastmoney.com/pub/web_ttjjsy_dbtg_wzl_01_01_01_1" style="color:#000" target="_blank">天天基金</a></div>
+            <a href="http://js1.eastmoney.com/tg.aspx?ID=4672" target="_blank"><em class="icon icon_qrjj80"></em></a><br>扫一扫下载APP
+        </div>
+        <div class="ftglist">
+            <div class="ftglistt">基金交易</div>
+            <ul>
+                <li><a href="https://trade6.1234567.com.cn/reg/step1" target="_blank">基金开户</a></li>
+                <li><a href="https://trade.1234567.com.cn/login" target="_blank">基金交易</a></li>
+                <li><a href="http://huoqibao.1234567.com.cn/" target="_blank">活期宝</a></li>
+                <li><a href="http://fund.eastmoney.com/trade/default.html" target="_blank">基金产品</a></li>
+                <li><a href="http://fund.eastmoney.com/gslc/" target="_blank">稳健理财</a></li>
+            </ul>
+        </div>
+        <div class="ftglist">
+            <div class="ftglistt">关注天天基金</div>
+            <ul>
+                <li><a href="http://weibo.com/ttfund" target="_blank"><em class="icon icon_wb"></em>天天基金网微博</a></li>
+                <li class="qrli"><a href="javascript:;" target="_self"><em class="icon icon_wx"></em>天天基金网微信<em class="icon icon_qr icon_jjwxqr"></em></a></li>
+            </ul>
+        </div>
+        <div class="qr qrl footer-qrlast">
+            <div class="t"><a href="https://qs.dfcfw.com/1605" style="color:#000" target="_blank">东方财富期货</a></div>
+            <a href="http://acttg.eastmoney.com/pub/web_kh_dcsy_dibudfcfqh_01_01_01_1" target="_blank"><em class="footer-icon-qihuoqr"></em></a><br>扫一扫下载APP
+        </div>
+        <div class="ftglist footer-lastqihuo">
+            <div class="ftglistt">期货交易</div>
+            <ul>
+                <li><a href="https://qs.dfcfw.com/1606" target="_blank">期货手机开户</a></li>
+                <li><a href="https://qs.dfcfw.com/1607" target="_blank">期货电脑开户</a></li>
+                <li><a href="https://qs.dfcfw.com/1608" target="_blank">期货官方网站</a></li>
+            </ul>
+        </div>
+    </div>
+        <div class="footercr" style="padding-top:8px;">信息网络传播视听节目许可证：0908328号 经营证券期货业务许可证编号：913101046312860336 违法和不良信息举报:021-61278686 举报邮箱：<a target="_self" href="mailto:jubao@eastmoney.com">jubao@eastmoney.com</a></div>
+        <div class="footercr" style="padding-bottom:8px;">
+            <em class="icon icon_icp"></em>沪ICP证:沪B2-20070217 <a target="_blank" rel="nofollow" href="https://beian.miit.gov.cn/" style="color: #3F3F3F;text-decoration:none;">网站备案号:沪ICP备05006054号-11 </a> <a target="_blank" rel="nofollow" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402000120" style="color: #3F3F3F;text-decoration:none;"><em class="icon icon_pol"></em>沪公网安备 31010402000120号</a> 版权所有:东方财富网 <span class="yjyfk">意见与建议:4000300059/952500</span>
+        </div>
+    <div class="footerlinks">
+			<a href="http://about.eastmoney.com" target="_blank" rel="nofollow">关于我们</a>
+            <a href="https://about.eastmoney.com/about/sdindex" target="_blank" rel="nofollow">可持续发展</a>
+			<a href="http://emhd2.eastmoney.com/market" target="_blank" rel="nofollow">广告服务</a>
+            <a href="https://srm.eastmoney.com/official-site/" target="_blank" rel="nofollow">供应商平台</a>
+			<a href="http://about.eastmoney.com/home/contact" target="_blank" rel="nofollow">联系我们</a>
+			<a href="https://zhaopin.eastmoney.com/" target="_blank" rel="nofollow">诚聘英才</a>
+			<a href="http://about.eastmoney.com/home/legal" target="_blank" rel="nofollow">法律声明</a>
+            <a href="http://about.eastmoney.com/home/conceal" target="_blank" rel="nofollow">隐私保护</a>
+			<a href="http://about.eastmoney.com/home/parper" target="_blank" rel="nofollow">征稿启事</a>
+			<a href="http://about.eastmoney.com/home/links" target="_blank" rel="nofollow">友情链接</a>
+    </div>
+    <div class="footerbz">
+        <img src="//g1.dfcfw.com/g3/201905/20190531140719.png" title="亲爱的市民朋友，上海警方反诈劝阻电
+话“962110”系专门针对避免您财产被
+骗受损而设，请您一旦收到来电，立即
+接听。" style="vertical-align: bottom;">
+        <span class="icon footer-police" title="上海网警网络110" style="position: relative; margin: 0 4px;"></span>
+        <span class="icon footer-zx110" title="网络社会征信网" style="position: relative;margin: 0 4px;"></span>
+        <a rel="nofollow" href="http://www.shjbzx.cn/" class="icon footer-shjubao" title="上海违法和违规信息举报中心" target="_blank"></a>
+        <a rel="nofollow" href="http://www.12377.cn" class="icon footer-12377" title="中国互联网违法和不良信息举报中心" target="_blank"></a>
+	</div>
+</div>
+
+<script>
+    if(document.all && !window.XMLHttpRequest){
+        $(".qrli").hover(function(){
+            $(".icon_qr",this).show();
+        },function(){
+            $(".icon_qr",this).hide();
+        });
+    }
+</script></div><script src="./static/libs/oldie.js"></script><script src="./static/libs/libs.min.js"></script><script src="//emcharts.dfcfw.com/suggest/stocksuggest2017.min.js"></script><script src="//emcharts.dftzj.com/ec/3.18.2/emcharts.min.js"></script><script src="./static/libs/miniquotechart2023.js"></script><script src="./static/libs/quotecenter.svgcharts2023.js"></script><script type="text/javascript">
+        var emtj_isUpload = 1;
+        var emtj_pageId = 113200301321;
+        var emtj_logSet = "0111111111";
+        var emtj_sampleRate = 1;      
+      </script><script src="./static/build/index.js"></script><div class="qt_feedback"><a class="feedback" href="http://corp.eastmoney.com/liuyan.html" target="_blank"><span>意见反馈</span><div class="feedback-left" style="display: none;"></div><div class="feedback-right" style="display: none;"></div></a></div><script src="//emres.dfcfw.com/public/js/topnav1200.js" async="" defer=""></script><script src="//emcharts.dfcfw.com/usercollect/usercollect.min.js"></script><script src="https://emcharts.dfcfw.com/websitepoptg/websitepoptg.js"></script><script src="https://i.eastmoney.com/websitecaptcha/build/popwscpc.js"></script><script src="https://anonflow2.eastmoney.com/ewtsdk/ewtsdk.prod.js?ver=20251128"></script><script src="//bdstatics.eastmoney.com/web/prd/jump_tracker.js"></script><script src="https://bdstatics.eastmoney.com/web/prd/jump_staytime.js" type="text/javascript" charset="UTF-8"></script><script src="//emcharts.dfcfw.com/newsts/newsts.min.js" async="" defer=""></script><script src="https://bdstatics.eastmoney.com/web/prd/bigdata_tracker_20240920.js" type="text/javascript" charset="UTF-8"></script><div style="position: fixed; z-index: 99998; top: 0px; left: 0px; width: 100%; height: 100%; background: rgba(51, 51, 51, 0.3);"></div><div style="position: fixed; z-index: 100000; left: 50%; top: 50%; margin-top: -273.5px; margin-left: -192.5px;"><img style="position: absolute; right: -20px; top:-20px; cursor: pointer;" src="https://emcharts.dfcfw.com/fullscreengg/ic_close.png" onclick="tk_tg_zoomin()"><img class="wztctg" src="https://g1.dfcfw.com/g4/202509/20250904163821.png" style="border: none; width: 385px; height: 547px; max-width: none;"><a href="#" style="position: absolute; bottom: 0px; height: 50px; width: 100%; right: 0px;"></a></div><div class="popwscps_d"><div class="popwscps_d_shadow"></div><iframe class="popwscps_d_iframe" src="https://i.eastmoney.com/websitecaptcha/slidervalid"></iframe></div><div class="top-nav-wrap"><div class="topnavmain" id="fixMenuBar">
+  <div class="tw-nav">
+    <a href="http://www.eastmoney.com/" target="_blank" class="sitemap">网站首页</a>
+    <a href="javascript:;" id="addfavlink" target="_self" class="sitemap">加收藏</a>
+    <div class="down-menu wz5">
+      <a target="_blank" href="http://js5.eastmoney.com/tg.aspx?ID=431" class="category red">移动客户端</a>
+      <ul><li><a target="_blank" href="https://marketing.dfcfs.com/views/aghdhtml/activity3.html">东方财富手机版</a></li><li><a target="_blank" href="http://js1.eastmoney.com/tg.aspx?ID=3120">天天基金手机版</a></li></ul>
+    </div>
+    <div class="down-menu wz4">
+      <a target="_blank" href="https://acttg.eastmoney.com/pub/pctg_hskh_act_wysfpcb_01_01_01_0" class="category">东方财富</a>
+      <ul><li><a target="_blank" href="https://acttg.eastmoney.com/pub/pctg_hskh_act_wysfpcb_01_01_01_0">东方财富桌面版</a></li><li><a target="_blank" href="https://acttg.eastmoney.com/pub/pctg_hskh_act_wysfzyb_01_01_01_0">东方财富专业版</a></li><li><a target="_blank" href="https://www.dfcfw.com/cpmm/TYB.html">东方财富增值版</a></li></ul>
+    </div>
+    <div class="down-menu">
+      <a target="_blank" href="http://fund.eastmoney.com/" class="category">天天基金网</a>
+      <ul><li><a target="_blank" href="https://trade.1234567.com.cn/login">基金交易</a></li><li><a target="_blank" href="http://huoqibao.1234567.com.cn/">活期宝</a></li><li><a target="_blank" href="http://favor.fund.eastmoney.com/">自选基金</a></li><li><a target="_blank" href="http://fund.eastmoney.com/fund.html">基金净值</a></li><li><a target="_blank" href="http://fund.eastmoney.com/data/fundranking.html">基金排行</a></li><li><a target="_blank" href="http://fund.eastmoney.com/data/fundrating.html">基金评级</a></li><li><a target="_blank" href="http://fund.eastmoney.com/dingtou/">基金定投</a></li><li><a target="_blank" href="http://fund.eastmoney.com/tradeindex.html">基金超市</a></li><li><a target="_blank" href="http://fund.eastmoney.com/daogou/">基金导购</a></li></ul>
+    </div>
+    <div class="down-menu wz6">
+      <a target="_blank" href="http://acttg.eastmoney.com/pub/web_kh_dcsy_jycdl_01_01_01_1" class="category">东方财富证券</a>
+      <ul><li><a target="_blank" href="https://jywg.18.cn/Login?el=1&amp;clear=&amp;returl=%2fTrade%2fBuy">证券交易</a></li><li><a target="_blank" href="https://zqhd.18.cn/index.html?tz=web_kh_cgds_khewmsms_01_01_01_0">惊喜佣金开户</a></li><li><a target="_blank" href="https://zqhd.18.cn/index.html?ad_id=web_kh_dcsy_jysjkh_01_01_01_0">手机开户</a></li><li><a target="_blank" href="https://acttg.eastmoney.com/pub/pctg_hskh_act_wysfzqjy_01_01_01_0">证券交易客户端</a></li><li><a target="_blank" href="https://store.18.cn/">营业部网点</a></li></ul>
+    </div>
+    <div class="down-menu wz6">
+      <a href="http://www.eastmoneyfutures.com/" class="category">东方财富期货</a>
+      <ul><li><a target="_blank" href="https://qs.dfcfw.com/1586">电脑开户</a></li><li><a target="_blank" href="https://qs.dfcfw.com/1587">手机开户</a></li><li><a target="_blank" href="https://qs.dfcfw.com/1588">预约开户</a></li><li><a target="_blank" href="https://qs.dfcfw.com/1589">开户帮助</a></li><li><a target="_blank" href="https://qs.dfcfw.com/1590">PC版</a></li><li><a target="_blank" href="https://qs.dfcfw.com/1591">Android版</a></li><li><a target="_blank" href="https://qs.dfcfw.com/1592">iPhone版</a></li></ul>
+  </div>
+    <div class="down-menu wz2">
+      <a target="_blank" href="https://acttg.eastmoney.com/pub/web_dfcfsy_dbtg_01_05_01_01_1" class="category">妙想</a>
+      <ul><li><a target="_blank" href="https://acttg.eastmoney.com/pub/web_dfcfsy_dbtg_top_05_02_02_1" tracker-eventcode="bglgg.17">妙想投研助理</a></li><li><a target="_blank" href="https://acttg.eastmoney.com/pub/web_dfcfqhsy_dbtg_top_05_03_03_1" tracker-eventcode="bglgg.18">妙想APP</a></li></ul>
+    </div>
+    <div class="down-menu wz5">
+      <a target="_blank" href="http://js5.eastmoney.com/tg.aspx?ID=789" class="category">Choice数据</a>
+      <ul><li><a target="_blank" href="https://choice.eastmoney.com/terminal?adid=web_choice_dcsy_website_01_01_01_0">Choice金融终端</a></li><li><a target="_blank" href="https://choice.eastmoney.com/dataservice?adid=web_choice_dcsy_website_01_01_01_0">Choice数据服务</a></li><li><a target="_blank" href="https://quantapi.eastmoney.com/?adid=web_choice_dcsy_website_01_01_01_0">Choice数据API</a></li><li><a target="_blank" href=" https://choice.eastmoney.com/choiceapp?adid=web_choice_dcsy_website_01_01_01_0">Choice数据APP</a></li></ul>
+    </div>
+    <div class="down-menu wz2">
+      <a target="_blank" href="http://guba.eastmoney.com/" class="category">股吧</a>
+      <ul><li><a target="_blank" href="https://i.eastmoney.com/">我的股吧</a></li><li><a target="_blank" href="http://guba.eastmoney.com/remenba.aspx?type=2">热门主题</a></li><li><a target="_blank" href="http://guba.eastmoney.com/remenba.aspx?type=1">热门个股</a></li><li><a target="_blank" href="http://gubatopic.eastmoney.com/">热门话题</a></li><li><a target="_blank" href="http://guba.eastmoney.com/qa/qa_list.aspx">问董秘</a></li></ul>
+    </div>
+  </div>
+  <div class="tw-login">
+    <div class="down-menu wz2" id="loginMenu"><a href="https://passport2.eastmoney.com/pub/login?backurl=https%3A//quote.eastmoney.com/center/gridlist.html%23industry_board" target="_blank" class="category">登录</a></div>
+    <div class="down-menu wz4">
+      <a target="_blank" href="http://i.eastmoney.com" class="category">我的菜单</a>
+      <ul><li><a target="_blank" href="http://quote.eastmoney.com/zixuan/?from=home">自选股</a></li><li><a target="_blank" href="https://mycaifuhao.eastmoney.com/">创作中心</a></li><li><a target="_blank" href="http://i.eastmoney.com/">个人主页</a></li><li><a target="_blank" href="http://group.eastmoney.com/mygroup.html">投资组合</a></li></ul>
+    </div>
+    <div class="down-menu wz4">
+      <a target="_blank" href="https://jy.xzsec.com/Trade/Buy" class="category">证券交易</a>
+      <ul><li><a target="_blank" href="https://jywg.18.cn/Login?el=1&amp;clear=&amp;returl=%2fTrade%2fBuy">在线交易</a></li><li><a target="_blank" href="https://zqhd.18.cn/index.html?ad_id=web_kh_dcsy_jyagkh_01_01_01_0">惊喜佣金开户</a></li><li><a target="_blank" href="https://zqhd.18.cn/index.html?ad_id=web_kh_dcsy_jysjkh_01_01_01_0">手机开户</a></li><li><a target="_blank" href="https://jywg.18.cn/Login?el=1&amp;clear=&amp;returl=%2fSearch%2fPosition">资金持仓</a></li><li><a target="_blank" href="https://jywg.18.cn/Login?el=1&amp;clear=&amp;returl=%2fSearch%2fOrders">交易查询</a></li><li><a target="_blank" href="https://jywg.18.cn/Login?el=1&amp;clear=&amp;returl=%2fMarginSearch%2fMyAssets">融资融券</a></li><li><a target="_blank" href="https://jywg.18.cn/Login?el=1&amp;clear=&amp;returl=%2fTrade%2fNewBuy">新股申购</a></li><li><a target="_blank" href="https://jywg.18.cn/Login?el=1&amp;clear=&amp;returl=%2fSchroederFund%2fIndex">天天宝</a></li><li><a target="_blank" href="https://jywg.18.cn/Login?el=1&amp;clear=&amp;returl=%2fHKTrade%2fHKBuy">港股通</a></li><li><a target="_blank" href="https://acttg.eastmoney.com/pub/pctg_hskh_act_wysfjykhd_01_01_01_0">交易客户端</a></li></ul>
+    </div>
+    <div class="down-menu wz4">
+      <a target="_blank" href="https://trade.1234567.com.cn/Login" class="category">基金交易</a>
+      <ul><li><a target="_blank" href="https://trade.1234567.com.cn/MyAssets/Default">我的资产</a></li><li><a target="_blank" href="https://trade.1234567.com.cn/xjb/index">活期宝</a></li><li><a target="_blank" href="https://trade.1234567.com.cn/zsb/default">指数宝</a></li><li><a target="_blank" href="https://trade.1234567.com.cn/FundtradePage/default2">买基金</a></li><li><a target="_blank" href="https://trade.1234567.com.cn/login?direct_url=/FundtradePage/redemption">卖基金</a></li><li><a target="_blank" href="https://trade.1234567.com.cn/Investment/default">基金定投</a></li><li><a target="_blank" href="https://trade.1234567.com.cn/reg/">免费开户</a></li><li><a target="_blank" href="http://fundact.eastmoney.com/app/">手机客户端</a></li></ul>
+    </div>
+  </div></div></div></body></html>
